@@ -1,0 +1,15 @@
+C:\QLGARA\QLGARADAL\bin\Debug\QLGARADAL.dll
+C:\QLGARA\QLGARADAL\bin\Debug\QLGARADAL.pdb
+C:\QLGARA\QLGARADAL\bin\Debug\QLGARADAL.xml
+C:\QLGARA\QLGARADAL\bin\Debug\QLGARADTO.dll
+C:\QLGARA\QLGARADAL\bin\Debug\Utility.dll
+C:\QLGARA\QLGARADAL\bin\Debug\QLGARADTO.pdb
+C:\QLGARA\QLGARADAL\bin\Debug\QLGARADTO.xml
+C:\QLGARA\QLGARADAL\bin\Debug\Utility.pdb
+C:\QLGARA\QLGARADAL\bin\Debug\Utility.xml
+C:\QLGARA\QLGARADAL\obj\Debug\QLGARADAL.vbprojResolveAssemblyReference.cache
+C:\QLGARA\QLGARADAL\obj\Debug\QLGARADAL.Resources.resources
+C:\QLGARA\QLGARADAL\obj\Debug\QLGARADAL.vbproj.GenerateResource.Cache
+C:\QLGARA\QLGARADAL\obj\Debug\QLGARADAL.dll
+C:\QLGARA\QLGARADAL\obj\Debug\QLGARADAL.xml
+C:\QLGARA\QLGARADAL\obj\Debug\QLGARADAL.pdb

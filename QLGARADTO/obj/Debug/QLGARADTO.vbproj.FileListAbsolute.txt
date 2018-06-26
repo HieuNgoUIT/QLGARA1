@@ -1,0 +1,9 @@
+C:\QLGARA\QLGARADTO\bin\Debug\QLGARADTO.dll
+C:\QLGARA\QLGARADTO\bin\Debug\QLGARADTO.pdb
+C:\QLGARA\QLGARADTO\bin\Debug\QLGARADTO.xml
+C:\QLGARA\QLGARADTO\obj\Debug\QLGARADTO.Resources.resources
+C:\QLGARA\QLGARADTO\obj\Debug\QLGARADTO.vbproj.GenerateResource.Cache
+C:\QLGARA\QLGARADTO\obj\Debug\QLGARADTO.dll
+C:\QLGARA\QLGARADTO\obj\Debug\QLGARADTO.xml
+C:\QLGARA\QLGARADTO\obj\Debug\QLGARADTO.pdb
+C:\QLGARA\QLGARADTO\obj\Debug\QLGARADTO.vbprojResolveAssemblyReference.cache
