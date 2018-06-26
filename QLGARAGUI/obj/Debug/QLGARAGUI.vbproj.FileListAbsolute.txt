@@ -25,3 +25,4 @@ C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.pdb
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.QuanLiXe.resources
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.QuanLiKhachHang.resources
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.PhieuTiepNhanXe.resources
+C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.PhieuThuTien.resources

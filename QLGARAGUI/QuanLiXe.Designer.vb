@@ -30,9 +30,10 @@ Partial Class QuanLiXe
         Me.Label8 = New System.Windows.Forms.Label()
         Me.tbHieuXe = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbMaKhachHang = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbMaHieuXe = New System.Windows.Forms.ComboBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgvDanhSachXe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,7 +47,7 @@ Partial Class QuanLiXe
         '
         'tbBienSo
         '
-        Me.tbBienSo.Location = New System.Drawing.Point(272, 84)
+        Me.tbBienSo.Location = New System.Drawing.Point(271, 51)
         Me.tbBienSo.Name = "tbBienSo"
         Me.tbBienSo.Size = New System.Drawing.Size(100, 20)
         Me.tbBienSo.TabIndex = 1
@@ -54,7 +55,7 @@ Partial Class QuanLiXe
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(151, 91)
+        Me.Label1.Location = New System.Drawing.Point(168, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(41, 13)
         Me.Label1.TabIndex = 2
@@ -62,7 +63,7 @@ Partial Class QuanLiXe
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(422, 84)
+        Me.Button1.Location = New System.Drawing.Point(199, 262)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
@@ -71,7 +72,7 @@ Partial Class QuanLiXe
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(674, 334)
+        Me.Button2.Location = New System.Drawing.Point(306, 262)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 4
@@ -81,7 +82,7 @@ Partial Class QuanLiXe
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(168, 136)
+        Me.Label8.Location = New System.Drawing.Point(168, 143)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(61, 13)
         Me.Label8.TabIndex = 15
@@ -89,7 +90,7 @@ Partial Class QuanLiXe
         '
         'tbHieuXe
         '
-        Me.tbHieuXe.Location = New System.Drawing.Point(271, 165)
+        Me.tbHieuXe.Location = New System.Drawing.Point(271, 201)
         Me.tbHieuXe.Name = "tbHieuXe"
         Me.tbHieuXe.ReadOnly = True
         Me.tbHieuXe.Size = New System.Drawing.Size(100, 20)
@@ -98,24 +99,23 @@ Partial Class QuanLiXe
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(168, 168)
+        Me.Label9.Location = New System.Drawing.Point(168, 201)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 13)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Hiệu Xe"
         '
-        'TextBox1
+        'tbMaKhachHang
         '
-        Me.TextBox1.Location = New System.Drawing.Point(271, 216)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 20
-        Me.TextBox1.Text = "Mã Khách Hàng"
+        Me.tbMaKhachHang.Location = New System.Drawing.Point(271, 91)
+        Me.tbMaKhachHang.Name = "tbMaKhachHang"
+        Me.tbMaKhachHang.Size = New System.Drawing.Size(100, 20)
+        Me.tbMaKhachHang.TabIndex = 20
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(168, 219)
+        Me.Label2.Location = New System.Drawing.Point(168, 94)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 13)
         Me.Label2.TabIndex = 19
@@ -124,18 +124,28 @@ Partial Class QuanLiXe
         'cbMaHieuXe
         '
         Me.cbMaHieuXe.FormattingEnabled = True
-        Me.cbMaHieuXe.Location = New System.Drawing.Point(271, 133)
+        Me.cbMaHieuXe.Location = New System.Drawing.Point(271, 143)
         Me.cbMaHieuXe.Name = "cbMaHieuXe"
-        Me.cbMaHieuXe.Size = New System.Drawing.Size(121, 21)
+        Me.cbMaHieuXe.Size = New System.Drawing.Size(100, 21)
         Me.cbMaHieuXe.TabIndex = 21
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(390, 88)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(26, 23)
+        Me.Button3.TabIndex = 22
+        Me.Button3.Text = "<"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'QuanLiXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(809, 560)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.cbMaHieuXe)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbMaKhachHang)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.tbHieuXe)
         Me.Controls.Add(Me.Label9)
@@ -161,7 +171,8 @@ Partial Class QuanLiXe
     Friend WithEvents Label8 As Label
     Friend WithEvents tbHieuXe As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents tbMaKhachHang As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents cbMaHieuXe As ComboBox
+    Friend WithEvents Button3 As Button
 End Class

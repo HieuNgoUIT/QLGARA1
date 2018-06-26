@@ -52,4 +52,29 @@ Public Class KhachHangDAL
     Public Function Taidulieu()
         Return dataaccess.Taidulieu("SELECT * FROM KHACHHANG")
     End Function
+    Public Function Tangmakh() As String
+        Dim sql As String = "Select * From KHACHHANG"
+        Dim str As String = dataaccess.str
+        Dim con As New SqlConnection()
+        con.ConnectionString = str
+        Dim da As New SqlDataAdapter(sql, con)
+        Dim dt As New DataTable()
+        da.Fill(dt)
+        Dim ma As String = ""
+        If dt.Rows.Count <= 0 Then
+            ma = "KH001"
+        Else
+            Dim k As Integer
+            ma = "KH"
+            k = Convert.ToInt32(dt.Rows(dt.Rows.Count - 1)(0).ToString().Substring(2, 3))
+            k = k + 1
+            If k < 10 Then
+                ma = ma + "00"
+            ElseIf k < 100 Then
+                ma = ma + "0"
+            End If
+            ma = ma + k.ToString()
+        End If
+        Return ma
+    End Function
 End Class

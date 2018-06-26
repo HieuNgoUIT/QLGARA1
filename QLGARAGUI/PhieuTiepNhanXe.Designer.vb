@@ -61,9 +61,9 @@ Partial Class PhieuTiepNhanXe
         'dgvDanhSachPhieuTiepNhan
         '
         Me.dgvDanhSachPhieuTiepNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDanhSachPhieuTiepNhan.Location = New System.Drawing.Point(85, 445)
+        Me.dgvDanhSachPhieuTiepNhan.Location = New System.Drawing.Point(42, 445)
         Me.dgvDanhSachPhieuTiepNhan.Name = "dgvDanhSachPhieuTiepNhan"
-        Me.dgvDanhSachPhieuTiepNhan.Size = New System.Drawing.Size(240, 150)
+        Me.dgvDanhSachPhieuTiepNhan.Size = New System.Drawing.Size(435, 150)
         Me.dgvDanhSachPhieuTiepNhan.TabIndex = 1
         '
         'GroupBox1
@@ -147,11 +147,11 @@ Partial Class PhieuTiepNhanXe
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(271, 20)
+        Me.Button2.Location = New System.Drawing.Point(264, 25)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(24, 23)
         Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "<"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'tbMaChiTietPhieu
@@ -208,18 +208,18 @@ Partial Class PhieuTiepNhanXe
         'dgvChiTietPhieuTiepNhan
         '
         Me.dgvChiTietPhieuTiepNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvChiTietPhieuTiepNhan.Location = New System.Drawing.Point(697, 466)
+        Me.dgvChiTietPhieuTiepNhan.Location = New System.Drawing.Point(587, 466)
         Me.dgvChiTietPhieuTiepNhan.Name = "dgvChiTietPhieuTiepNhan"
-        Me.dgvChiTietPhieuTiepNhan.Size = New System.Drawing.Size(240, 150)
+        Me.dgvChiTietPhieuTiepNhan.Size = New System.Drawing.Size(430, 150)
         Me.dgvChiTietPhieuTiepNhan.TabIndex = 0
         '
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(756, 372)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(113, 23)
         Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "Thêm Chi Tiết"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'PhieuTiepNhanXe

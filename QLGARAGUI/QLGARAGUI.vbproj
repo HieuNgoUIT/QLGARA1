@@ -94,6 +94,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PhieuThuTien.Designer.vb">
+      <DependentUpon>PhieuThuTien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThuTien.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PhieuTiepNhanXe.Designer.vb">
       <DependentUpon>PhieuTiepNhanXe.vb</DependentUpon>
     </Compile>
@@ -128,6 +134,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThuTien.resx">
+      <DependentUpon>PhieuThuTien.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuTiepNhanXe.resx">
       <DependentUpon>PhieuTiepNhanXe.vb</DependentUpon>

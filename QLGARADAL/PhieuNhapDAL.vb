@@ -56,7 +56,7 @@ Public Class PhieuNhapDAL
             ma = "CT001"
         Else
             Dim k As Integer
-            ma = "PN"
+            ma = "CT"
             k = Convert.ToInt32(dt.Rows(dt.Rows.Count - 1)(0).ToString().Substring(2, 3))
             k = k + 1
             If k < 10 Then

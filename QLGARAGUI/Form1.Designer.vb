@@ -25,9 +25,9 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TiếpNhậnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.XuấtPhiếuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PhiếuThuTiềnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLíXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLíKháchHàngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PhiếuThuTiềnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,16 +53,10 @@ Partial Class Form1
         Me.XuấtPhiếuToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
         Me.XuấtPhiếuToolStripMenuItem.Text = "Quản lí"
         '
-        'PhiếuThuTiềnToolStripMenuItem
-        '
-        Me.PhiếuThuTiềnToolStripMenuItem.Name = "PhiếuThuTiềnToolStripMenuItem"
-        Me.PhiếuThuTiềnToolStripMenuItem.Size = New System.Drawing.Size(99, 20)
-        Me.PhiếuThuTiềnToolStripMenuItem.Text = "Phiếu Thu Tiền"
-        '
         'QuảnLíXeToolStripMenuItem
         '
         Me.QuảnLíXeToolStripMenuItem.Name = "QuảnLíXeToolStripMenuItem"
-        Me.QuảnLíXeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuảnLíXeToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.QuảnLíXeToolStripMenuItem.Text = "Quản lí xe"
         '
         'QuảnLíKháchHàngToolStripMenuItem
@@ -70,6 +64,12 @@ Partial Class Form1
         Me.QuảnLíKháchHàngToolStripMenuItem.Name = "QuảnLíKháchHàngToolStripMenuItem"
         Me.QuảnLíKháchHàngToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.QuảnLíKháchHàngToolStripMenuItem.Text = "Quản lí khách hàng"
+        '
+        'PhiếuThuTiềnToolStripMenuItem
+        '
+        Me.PhiếuThuTiềnToolStripMenuItem.Name = "PhiếuThuTiềnToolStripMenuItem"
+        Me.PhiếuThuTiềnToolStripMenuItem.Size = New System.Drawing.Size(99, 20)
+        Me.PhiếuThuTiềnToolStripMenuItem.Text = "Phiếu Thu Tiền"
         '
         'Form1
         '

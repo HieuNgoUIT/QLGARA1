@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports QLGARABUS
+Imports QLGARADTO
 Public Class QuanLiXe
     Dim xeBus As XeBus
     Private Sub QuanLiXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -69,4 +70,30 @@ Public Class QuanLiXe
         'CP,,,EF
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim f As New QuanLiKhachHang
+        f.ShowDialog()
+        If (f.DialogResult = DialogResult.OK) Then
+            tbMaKhachHang.Text = f.tbMaKhachHang.Text
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim XE As XeDTO
+        XE = New XeDTO()
+        XE.BienSo1 = tbBienSo.Text
+        XE.MaHieuXe1 = cbMaHieuXe.Text
+        XE.MaKhachHang1 = tbMaKhachHang.Text
+
+        xeBus = New XeBus()
+        Dim ketQua As String = xeBus.themxe(XE)
+        If (ketQua <> "Success") Then
+
+            MessageBox.Show(ketQua)
+
+        End If
+        MessageBox.Show("Thêm xe thành công !")
+        xeBus = New XeBus()
+        dgvDanhSachXe.DataSource = xeBus.Taidulieu
+    End Sub
 End Class
