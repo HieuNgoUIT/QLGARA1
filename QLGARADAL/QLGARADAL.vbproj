@@ -68,6 +68,7 @@
     <Compile Include="KhachHangDAL.vb" />
     <Compile Include="PhieuNhapDAL.vb" />
     <Compile Include="PhieuThuTienDAL.vb" />
+    <Compile Include="ThamSoDAL.vb" />
     <Compile Include="XeDAL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

@@ -4,6 +4,13 @@ Imports QLGARADAL
 Public Class PhieuTiepNhanXe
     Dim ptnBUS As PhieuNhapBUS
     Dim pnDAL As PhieuNhapDAL
+    Dim tsBUS As ThamSoBUS
+
+    Dim max As Integer
+    Dim count As Integer
+
+
+
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachPhieuTiepNhan.CellContentClick
 
     End Sub
@@ -21,6 +28,13 @@ Public Class PhieuTiepNhanXe
         dtpNgayTiepNhan.Value = Date.Now
         dgvDanhSachPhieuTiepNhan.DataSource = ptnBUS.Taidulieu
         dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
+
+
+        tsBUS = New ThamSoBUS()
+        Dim dtts As DataTable = tsBUS.Taidulieu()
+        max = Integer.Parse(dtts.Rows(0).Item(0).ToString())
+        count = Integer.Parse(dtts.Rows(0).Item(1).ToString())
+        tbXeCount.Text = count
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -69,7 +83,7 @@ Public Class PhieuTiepNhanXe
         CTPN.MaCTPTN1 = tbMaChiTietPhieu.Text
         CTPN.BienSo1 = tbBienSo.Text
         CTPN.MaPhieuTiepNhan1 = tbMaPhieuTiepNhan1.Text
-        CTPN.SoLuongTiepNhan1 = 0
+
 
         ptnBUS = New PhieuNhapBUS()
         Dim ketQua As String = ptnBUS.themctpn(CTPN)
@@ -80,5 +94,17 @@ Public Class PhieuTiepNhanXe
         End If
         MessageBox.Show("Thêm PN thành công !")
         dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
+
+        count += 1
+        tbXeCount.Text = count
+
+        Dim tsDTO As ThamSoDTO
+        tsDTO = New ThamSoDTO()
+        tsDTO.SoLuongXeTrongNgay1 = count
+        tsBUS.themts(tsDTO)
+
+        pnDAL = New PhieuNhapDAL()
+        tbMaChiTietPhieu.Text = pnDAL.Tangmact
+
     End Sub
 End Class

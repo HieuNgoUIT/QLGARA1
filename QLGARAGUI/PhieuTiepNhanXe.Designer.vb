@@ -41,6 +41,8 @@ Partial Class PhieuTiepNhanXe
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dgvChiTietPhieuTiepNhan = New System.Windows.Forms.DataGridView()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.tbXeCount = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvDanhSachPhieuTiepNhan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -222,11 +224,29 @@ Partial Class PhieuTiepNhanXe
         Me.Button3.Text = "Thêm Chi Tiết"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(565, 30)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(150, 13)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Số xe đã tiếp nhận trong ngày"
+        '
+        'tbXeCount
+        '
+        Me.tbXeCount.Location = New System.Drawing.Point(721, 23)
+        Me.tbXeCount.Name = "tbXeCount"
+        Me.tbXeCount.Size = New System.Drawing.Size(100, 20)
+        Me.tbXeCount.TabIndex = 8
+        '
         'PhieuTiepNhanXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1076, 701)
+        Me.Controls.Add(Me.tbXeCount)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.dgvChiTietPhieuTiepNhan)
         Me.Controls.Add(Me.GroupBox2)
@@ -241,6 +261,7 @@ Partial Class PhieuTiepNhanXe
         Me.GroupBox2.PerformLayout()
         CType(Me.dgvChiTietPhieuTiepNhan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -263,4 +284,6 @@ Partial Class PhieuTiepNhanXe
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents tbXeCount As TextBox
 End Class

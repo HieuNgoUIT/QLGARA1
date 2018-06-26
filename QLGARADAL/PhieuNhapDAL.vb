@@ -15,7 +15,7 @@ Public Class PhieuNhapDAL
         Return dataaccess.Thucthisql(sql)
     End Function
     Public Function Themchitiet(ByVal x As PhieuChiTietDTO) As String
-        Dim sql As String = "INSERT INTO CHITIETPHIEUTIEPNHAN(maCTPTN,maPhieuTiepNHan,bienSo,soLuongTiepNhan) VALUES(N'" & x.MaCTPTN1.Trim & "',N'" & x.MaPhieuTiepNhan1 & "',N'" & x.BienSo1 & "',N'" & x.SoLuongTiepNhan1 & " ')"
+        Dim sql As String = "INSERT INTO CHITIETPHIEUTIEPNHAN(maCTPTN,maPhieuTiepNHan,bienSo) VALUES(N'" & x.MaCTPTN1.Trim & "',N'" & x.MaPhieuTiepNhan1 & "',N'" & x.BienSo1 & " ')"
         Return dataaccess.Thucthisql(sql)
     End Function
     Public Function Tangma() As String

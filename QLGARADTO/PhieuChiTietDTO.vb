@@ -2,7 +2,7 @@
     Private MaCTPTN As String
     Private MaPhieuTiepNhan As String
     Private BienSo As String
-    Private SoLuongTiepNhan As Integer
+
 
     Public Property MaCTPTN1 As String
         Get
@@ -31,12 +31,5 @@
         End Set
     End Property
 
-    Public Property SoLuongTiepNhan1 As Integer
-        Get
-            Return SoLuongTiepNhan
-        End Get
-        Set(value As Integer)
-            SoLuongTiepNhan = value
-        End Set
-    End Property
+
 End Class
