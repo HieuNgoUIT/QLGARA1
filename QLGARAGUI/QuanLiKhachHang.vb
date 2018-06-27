@@ -17,6 +17,16 @@ Public Class QuanLiKhachHang
         Dim dong As Integer = e.RowIndex
         tbMaKhachHang.DataBindings.Clear()
         tbMaKhachHang.DataBindings.Add("Text", dgvDanhSachKhachHang.DataSource, "maKhachHang")
+        tbTenKhachHang.DataBindings.Clear()
+        tbTenKhachHang.DataBindings.Add("Text", dgvDanhSachKhachHang.DataSource, "tenChuXe")
+        tbEmail.DataBindings.Clear()
+        tbEmail.DataBindings.Add("Text", dgvDanhSachKhachHang.DataSource, "Email")
+        tbDienThoai.DataBindings.Clear()
+        tbDienThoai.DataBindings.Add("Text", dgvDanhSachKhachHang.DataSource, "dienThoai")
+        tbDiaChi.DataBindings.Clear()
+        tbDiaChi.DataBindings.Add("Text", dgvDanhSachKhachHang.DataSource, "diaChi")
+        tbTienNo.DataBindings.Clear()
+        tbTienNo.DataBindings.Add("Text", dgvDanhSachKhachHang.DataSource, "tienNo")
 
 
     End Sub

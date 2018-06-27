@@ -36,6 +36,27 @@ Public Class PhieuTiepNhanXe
         count = Integer.Parse(dtts.Rows(0).Item(1).ToString())
         tbXeCount.Text = count
     End Sub
+    Private Sub Luoi_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachPhieuTiepNhan.RowEnter
+        Dim dong As Integer = e.RowIndex
+        tbMaPhieuTiepNhan.DataBindings.Clear()
+        tbMaPhieuTiepNhan.DataBindings.Add("Text", dgvDanhSachPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
+        dtpNgayTiepNhan.DataBindings.Clear()
+        dtpNgayTiepNhan.DataBindings.Add("Value", dgvDanhSachPhieuTiepNhan.DataSource, "ngayTiepNhan")
+        'tbMaPhieuTiepNhan1.DataBindings.Clear()
+        'tbMaPhieuTiepNhan1.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
+        ' tbMaPhieuTiepNhan1.Text = tbMaPhieuTiepNhan.Text
+    End Sub
+    'Private Sub Luoi_RowEnter1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvChiTietPhieuTiepNhan.RowEnter
+    '    Dim dong As Integer = e.RowIndex
+    '    tbMaPhieuTiepNhan1.DataBindings.Clear()
+    '    tbMaPhieuTiepNhan1.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
+    '    tbMaChiTietPhieu.DataBindings.Clear()
+    '    tbMaChiTietPhieu.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maCTPTN")
+    '    tbBienSo.DataBindings.Clear()
+    '    tbBienSo.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "bienSo")
+
+
+    'End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Size = New Size(1092, 740)
@@ -85,26 +106,34 @@ Public Class PhieuTiepNhanXe
         CTPN.MaPhieuTiepNhan1 = tbMaPhieuTiepNhan1.Text
 
 
-        ptnBUS = New PhieuNhapBUS()
-        Dim ketQua As String = ptnBUS.themctpn(CTPN)
-        If (ketQua <> "Success") Then
+        'dtpNgayTiepNhan.Format = DateTimePickerFormat.Custom
+        'dtpNgayTiepNhan.CustomFormat = "dd/MM/yyyy"
+        Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
 
-            MessageBox.Show(ketQua)
+        If (dtpNgayTiepNhan.Value.ToString("dd/MM/yyyy") = todaysdate And count < max) Then
+            ptnBUS = New PhieuNhapBUS()
+            Dim ketQua As String = ptnBUS.themctpn(CTPN)
+            If (ketQua <> "Success") Then
+
+                MessageBox.Show(ketQua)
+
+            End If
+            MessageBox.Show("Thêm PN thành công !")
+            dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
+
+            count += 1
+            tbXeCount.Text = count
+
+            Dim tsDTO As ThamSoDTO
+            tsDTO = New ThamSoDTO()
+            tsDTO.SoLuongXeTrongNgay1 = count
+            tsBUS.themts(tsDTO)
+
+            pnDAL = New PhieuNhapDAL()
+            tbMaChiTietPhieu.Text = pnDAL.Tangmact
+        Else MessageBox.Show("Da tiep nhan qua 30xe !")
 
         End If
-        MessageBox.Show("Thêm PN thành công !")
-        dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
-
-        count += 1
-        tbXeCount.Text = count
-
-        Dim tsDTO As ThamSoDTO
-        tsDTO = New ThamSoDTO()
-        tsDTO.SoLuongXeTrongNgay1 = count
-        tsBUS.themts(tsDTO)
-
-        pnDAL = New PhieuNhapDAL()
-        tbMaChiTietPhieu.Text = pnDAL.Tangmact
 
     End Sub
 End Class

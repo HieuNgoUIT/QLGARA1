@@ -237,6 +237,7 @@ Partial Class PhieuTiepNhanXe
         '
         Me.tbXeCount.Location = New System.Drawing.Point(721, 23)
         Me.tbXeCount.Name = "tbXeCount"
+        Me.tbXeCount.ReadOnly = True
         Me.tbXeCount.Size = New System.Drawing.Size(100, 20)
         Me.tbXeCount.TabIndex = 8
         '

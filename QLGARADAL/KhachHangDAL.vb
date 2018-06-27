@@ -52,6 +52,9 @@ Public Class KhachHangDAL
     Public Function Taidulieu()
         Return dataaccess.Taidulieu("SELECT * FROM KHACHHANG")
     End Function
+    Public Function Taidulieuhientai(mkh As String)
+        Return dataaccess.Taidulieu("SELECT * FROM KHACHHANG WHERE maKhachHang =" & "'" & mkh & "'")
+    End Function
     Public Function Tangmakh() As String
         Dim sql As String = "Select * From KHACHHANG"
         Dim str As String = dataaccess.str

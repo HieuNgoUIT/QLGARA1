@@ -33,6 +33,8 @@ Partial Class PhieuThuTien
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dgvDanhSachPhieuThuTien = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.tbMaKhachHang = New System.Windows.Forms.TextBox()
         CType(Me.dgvDanhSachPhieuThuTien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -107,7 +109,7 @@ Partial Class PhieuThuTien
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Nhap "
         Me.Button1.UseVisualStyleBackColor = True
         '
         'dgvDanhSachPhieuThuTien
@@ -127,11 +129,29 @@ Partial Class PhieuThuTien
         Me.Button2.Text = "<"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(348, 207)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(38, 13)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "MAKH"
+        '
+        'tbMaKhachHang
+        '
+        Me.tbMaKhachHang.Location = New System.Drawing.Point(408, 207)
+        Me.tbMaKhachHang.Name = "tbMaKhachHang"
+        Me.tbMaKhachHang.Size = New System.Drawing.Size(100, 20)
+        Me.tbMaKhachHang.TabIndex = 12
+        '
         'PhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(776, 547)
+        Me.Controls.Add(Me.tbMaKhachHang)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.dgvDanhSachPhieuThuTien)
         Me.Controls.Add(Me.Button1)
@@ -162,4 +182,6 @@ Partial Class PhieuThuTien
     Friend WithEvents Button1 As Button
     Friend WithEvents dgvDanhSachPhieuThuTien As DataGridView
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents tbMaKhachHang As TextBox
 End Class

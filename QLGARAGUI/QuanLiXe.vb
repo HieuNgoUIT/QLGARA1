@@ -31,18 +31,17 @@ Public Class QuanLiXe
         Dim dong As Integer = e.RowIndex
         tbBienSo.DataBindings.Clear()
         tbBienSo.DataBindings.Add("Text", dgvDanhSachXe.DataSource, "bienSo")
-        'theloai.DataBindings.Clear()
-        'theloai.DataBindings.Add("Text", Luoi.DataSource, "Theloai")
-        'tacgia.DataBindings.Clear()
-        'tacgia.DataBindings.Add("Text", Luoi.DataSource, "Tacgia")
-        'soluongton.DataBindings.Clear()
-        'soluongton.DataBindings.Add("Text", Luoi.DataSource, "Soluongton")
-        'masach.DataBindings.Clear()
-        'masach.DataBindings.Add("Text", Luoi.DataSource, "Masach")
+        tbMaKhachHang.DataBindings.Clear()
+        tbMaKhachHang.DataBindings.Add("Text", dgvDanhSachXe.DataSource, "maKhachHang")
+        cbMaHieuXe.DataBindings.Clear()
+        cbMaHieuXe.DataBindings.Add("Text", dgvDanhSachXe.DataSource, "maHieuXe")
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         DialogResult = DialogResult.OK
+
+
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaHieuXe.SelectedIndexChanged

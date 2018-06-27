@@ -20,6 +20,9 @@ Public Class KhachHangBUS
     Public Function Taidulieu()
         Return khDAL.Taidulieu()
     End Function
+    Public Function Taidulieuht(mkh As String)
+        Return khDAL.Taidulieuhientai(mkh)
+    End Function
 
 End Class
 
