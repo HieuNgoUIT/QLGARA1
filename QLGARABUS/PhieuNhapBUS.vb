@@ -8,6 +8,10 @@ Public Class PhieuNhapBUS
         pnDAL = New PhieuNhapDAL()
         Return pnDAL.Taidulieu()
     End Function
+    Public Function Taidulieutyc(map As String)
+        pnDAL = New PhieuNhapDAL()
+        Return pnDAL.Taidulieutheoyeucau(map)
+    End Function
     Public Function Taidulieuchitiet()
         pnDAL = New PhieuNhapDAL()
         Return pnDAL.Taidulieuchitiet()

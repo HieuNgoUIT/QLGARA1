@@ -25,6 +25,7 @@ Partial Class PhieuTiepNhanXe
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvDanhSachPhieuTiepNhan = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dtpNgayTiepNhan = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,6 +44,8 @@ Partial Class PhieuTiepNhanXe
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.tbXeCount = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvDanhSachPhieuTiepNhan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -70,6 +73,8 @@ Partial Class PhieuTiepNhanXe
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button6)
+        Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.dtpNgayTiepNhan)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -82,13 +87,22 @@ Partial Class PhieuTiepNhanXe
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(100, 205)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 6
+        Me.Button4.Text = "Thêm Phiếu"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(117, 241)
+        Me.Button1.Location = New System.Drawing.Point(130, 279)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Tạo Phiếu"
+        Me.Button1.Text = "Lưu"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'dtpNgayTiepNhan
@@ -221,7 +235,7 @@ Partial Class PhieuTiepNhanXe
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(113, 23)
         Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Thêm Chi Tiết"
+        Me.Button3.Text = "Lưu"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label6
@@ -241,11 +255,30 @@ Partial Class PhieuTiepNhanXe
         Me.tbXeCount.Size = New System.Drawing.Size(100, 20)
         Me.tbXeCount.TabIndex = 8
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(656, 344)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(102, 23)
+        Me.Button5.TabIndex = 9
+        Me.Button5.Text = "Thêm Chi Tiết"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(229, 205)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "Chi Tiết"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'PhieuTiepNhanXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1076, 701)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.tbXeCount)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button3)
@@ -287,4 +320,7 @@ Partial Class PhieuTiepNhanXe
     Friend WithEvents Button3 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents tbXeCount As TextBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class

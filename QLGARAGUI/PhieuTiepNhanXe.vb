@@ -20,8 +20,7 @@ Public Class PhieuTiepNhanXe
     End Sub
 
     Private Sub PhieuTiepNhanXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        pnDAL = New PhieuNhapDAL()
-        tbMaPhieuTiepNhan.Text = pnDAL.Tangma
+
 
         ptnBUS = New PhieuNhapBUS()
         Size = New Size(523, 714)
@@ -42,26 +41,20 @@ Public Class PhieuTiepNhanXe
         tbMaPhieuTiepNhan.DataBindings.Add("Text", dgvDanhSachPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
         dtpNgayTiepNhan.DataBindings.Clear()
         dtpNgayTiepNhan.DataBindings.Add("Value", dgvDanhSachPhieuTiepNhan.DataSource, "ngayTiepNhan")
-        'tbMaPhieuTiepNhan1.DataBindings.Clear()
-        'tbMaPhieuTiepNhan1.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
-        ' tbMaPhieuTiepNhan1.Text = tbMaPhieuTiepNhan.Text
     End Sub
-    'Private Sub Luoi_RowEnter1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvChiTietPhieuTiepNhan.RowEnter
-    '    Dim dong As Integer = e.RowIndex
-    '    tbMaPhieuTiepNhan1.DataBindings.Clear()
-    '    tbMaPhieuTiepNhan1.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
-    '    tbMaChiTietPhieu.DataBindings.Clear()
-    '    tbMaChiTietPhieu.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maCTPTN")
-    '    tbBienSo.DataBindings.Clear()
-    '    tbBienSo.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "bienSo")
-
-
-    'End Sub
+    Private Sub Luoi_RowEnter1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvChiTietPhieuTiepNhan.RowEnter
+        Dim dong As Integer = e.RowIndex
+        tbMaPhieuTiepNhan1.DataBindings.Clear()
+        tbMaPhieuTiepNhan1.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
+        tbMaChiTietPhieu.DataBindings.Clear()
+        tbMaChiTietPhieu.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "maCTPTN")
+        tbBienSo.DataBindings.Clear()
+        tbBienSo.DataBindings.Add("Text", dgvChiTietPhieuTiepNhan.DataSource, "bienSo")
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Size = New Size(1092, 740)
-        pnDAL = New PhieuNhapDAL()
-        tbMaPhieuTiepNhan.Text = pnDAL.Tangma
         tbMaChiTietPhieu.Text = pnDAL.Tangmact
 
         Dim PN As PhieuNhapDTO
@@ -77,9 +70,10 @@ Public Class PhieuTiepNhanXe
 
         End If
         MessageBox.Show("Thêm PN thành công !")
-
-        dgvDanhSachPhieuTiepNhan.DataSource = ptnBUS.Taidulieu
         tbMaPhieuTiepNhan1.Text = tbMaPhieuTiepNhan.Text
+        dgvDanhSachPhieuTiepNhan.DataSource = ptnBUS.Taidulieu
+        Dim lastrow As Integer = dgvDanhSachPhieuTiepNhan.RowCount - 2
+        dgvDanhSachPhieuTiepNhan.CurrentCell = dgvDanhSachPhieuTiepNhan(0, lastrow)
     End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
@@ -135,5 +129,22 @@ Public Class PhieuTiepNhanXe
 
         End If
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        pnDAL = New PhieuNhapDAL()
+        tbMaPhieuTiepNhan.Text = pnDAL.Tangma
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        pnDAL = New PhieuNhapDAL()
+        tbMaChiTietPhieu.Text = pnDAL.Tangmact
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Size = New Size(1092, 740)
+        tbMaPhieuTiepNhan1.Text = tbMaPhieuTiepNhan.Text
+        ptnBUS = New PhieuNhapBUS()
+        dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieutyc(tbMaPhieuTiepNhan.Text)
     End Sub
 End Class

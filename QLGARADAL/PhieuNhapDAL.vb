@@ -10,6 +10,9 @@ Public Class PhieuNhapDAL
     Public Function Taidulieuchitiet() As DataTable
         Return dataaccess.Taidulieu("SELECT * FROM CHITIETPHIEUTIEPNHAN")
     End Function
+    Public Function Taidulieutheoyeucau(ma As String) As DataTable
+        Return dataaccess.Taidulieu("SELECT * FROM CHITIETPHIEUTIEPNHAN WHERE maPhieuTiepNhan='" & ma & "'")
+    End Function
     Public Function Them(ByVal x As PhieuNhapDTO) As String
         Dim sql As String = "INSERT INTO PHIEUTIEPNHAN(maPhieuTiepNHan,ngayTiepNhan) VALUES(N'" & x.MaPhieuTiepNhan1.Trim & "',N'" & x.NgayTiepNhan1 & " ')"
         Return dataaccess.Thucthisql(sql)

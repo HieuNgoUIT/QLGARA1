@@ -2,7 +2,6 @@ C:\QLGARA\QLGARAGUI\bin\Debug\QLGARAGUI.exe.config
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.vbprojResolveAssemblyReference.cache
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.Form1.resources
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.Resources.resources
-C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.XeGUI.resources
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.vbproj.GenerateResource.Cache
 C:\QLGARA\QLGARAGUI\bin\Debug\QLGARAGUI.exe
 C:\QLGARA\QLGARAGUI\bin\Debug\QLGARAGUI.pdb

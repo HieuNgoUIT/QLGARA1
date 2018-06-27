@@ -118,12 +118,6 @@
     <Compile Include="QuanLiXe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="XeGUI.Designer.vb">
-      <DependentUpon>XeGUI.vb</DependentUpon>
-    </Compile>
-    <Compile Include="XeGUI.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -146,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLiXe.resx">
       <DependentUpon>QuanLiXe.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XeGUI.resx">
-      <DependentUpon>XeGUI.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
