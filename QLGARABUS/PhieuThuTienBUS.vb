@@ -10,6 +10,6 @@ Public Class PhieuThuTienBUS
     End Function
     Public Function Taidulieupt()
         phieuDAL = New PhieuThuTienDAL()
-        Return phieuDAL.Taidulieuphieuthu()
+        Return phieuDAL.Taidulieuphieuthutien()
     End Function
 End Class

@@ -1,29 +1,17 @@
-﻿Imports QLGARADAL
-Imports QLGARADTO
-Imports Utility
+﻿Imports QLGARADTO
+Imports QLGARADAL
 Public Class KhachHangBUS
-
-
-    Private khDAL As KhachHangDAL
-    Public Sub New()
-        khDAL = New KhachHangDAL()
-    End Sub
-    Public Sub New(connectionString As String)
-        khDAL = New KhachHangDAL(connectionString)
-    End Sub
+    Dim KHDAL As KhachHangDAL
     Public Function themkh(ByVal kh As KhachHangDTO) As String
         '1. verify data here!!
-
+        KHDAL = New PhieuThuTienDAL()
         '2. insert to DB
-        Return khDAL.Them(kh)
+        Return KHDAL.Them(kh)
     End Function
-    Public Function Taidulieu()
-        Return khDAL.Taidulieu()
+    Public Function Taidulieukh()
+        KHDAL = New PhieuThuTienDAL()
+        Return KHDAL.Taidulieukhachang()
     End Function
-    Public Function Taidulieuht(mkh As String)
-        Return khDAL.Taidulieuhientai(mkh)
-    End Function
-
 End Class
 
 
