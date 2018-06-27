@@ -1,18 +1,17 @@
 ﻿Imports QLGARADTO
 Imports QLGARADAL.data
 Imports System.Data.SqlClient
-Imports QLGARADAL
-Public Class KhachhangDAL
+Public Class PhieuSuaChuaDAL
     Dim dataaccess As New DataAccess
-    Public Function Them(ByVal x As KhachHangDTO) As String
-        Dim sql As String = "INSERT INTO KHACHHANG(MaKhachHang,TenChuXe,TienNo,Email,DiaChi,DienThoai) VALUES(N'" & x.MaKhachHang1.Trim & "',N'" & x.TenChuXe1.Trim & "',N'" & x.TienNo1 & "',N'" & x.Email1.Trim & " ',N'" & x.DiaChi1.Trim & " ',N'" & x.DienThoai1.Trim & " ')"
+    Public Function Them(ByVal x As PhieuSuaChuaDTO) As String
+        Dim sql As String = "INSERT INTO CHITIETPSC(MaPhieuSuaChua,BienSo,NoiDungSuaChua,MaVatTu,TienCong,ThanhTien) VALUES(N'" & x.MaPhieuSuaChua1.Trim & "',N'" & x.BienSo1.Trim & "',N'" & x.NoiDungSuaChua1.Trim & "',N'" & x.MaVatTu1.Trim & " ',N'" & x.TienCong1.Trim & "',N'" & x.ThanhTien1.Trim & "')"
         Return dataaccess.Thucthisql(sql)
     End Function
-    Public Function Taidulieukhachang() As DataTable
-        Return dataaccess.Taidulieu("SELECT * FROM KHACHHANG")
+    Public Function Taidulieuphieusuachua() As DataTable
+        Return dataaccess.Taidulieu("SELECT * FROM CHITIETPSC")
     End Function
-    Public Function Tangmakh() As String
-        Dim sql As String = "Select * From KHACHAHNG"
+    Public Function Tangmapsc() As String
+        Dim sql As String = "Select * From CHITIETPSC"
         Dim str As String = dataaccess.str
         Dim con As New SqlConnection()
         con.ConnectionString = str
@@ -21,10 +20,10 @@ Public Class KhachhangDAL
         da.Fill(dt)
         Dim ma As String = ""
         If dt.Rows.Count <= 0 Then
-            ma = "KH001"
+            ma = "PS001"
         Else
             Dim k As Integer
-            ma = "KH"
+            ma = "PT"
             k = Convert.ToInt32(dt.Rows(dt.Rows.Count - 1)(0).ToString().Substring(2, 3))
             k = k + 1
             If k < 10 Then

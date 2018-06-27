@@ -2,17 +2,17 @@
 Imports QLGARADAL.data
 Imports System.Data.SqlClient
 Imports QLGARADAL
-Public Class KhachhangDAL
+Public Class DoanhThuDAL
     Dim dataaccess As New DataAccess
-    Public Function Them(ByVal x As KhachHangDTO) As String
-        Dim sql As String = "INSERT INTO KHACHHANG(MaKhachHang,TenChuXe,TienNo,Email,DiaChi,DienThoai) VALUES(N'" & x.MaKhachHang1.Trim & "',N'" & x.TenChuXe1.Trim & "',N'" & x.TienNo1 & "',N'" & x.Email1.Trim & " ',N'" & x.DiaChi1.Trim & " ',N'" & x.DienThoai1.Trim & " ')"
+    Public Function Them(ByVal x As DoanhThuDTO) As String
+        Dim sql As String = "INSERT INTO DOANHTHU(Thang,TongDoanhThu,MaPhieuSuaChua,SoLuotSua,ThanhTien) VALUES(N'" & x.Thang1 & "',N'" & x.TongDoanhThu1 & "',N'" & x.MaPhieuSuaChua1.Trim & "',N'" & x.SoLuotSua1 & "',N'" & x.ThanhTien1 & "')"
         Return dataaccess.Thucthisql(sql)
     End Function
-    Public Function Taidulieukhachang() As DataTable
-        Return dataaccess.Taidulieu("SELECT * FROM KHACHHANG")
+    Public Function Taidulieudoanhthu() As DataTable
+        Return dataaccess.Taidulieu("SELECT * FROM DOANHTHU")
     End Function
-    Public Function Tangmakh() As String
-        Dim sql As String = "Select * From KHACHAHNG"
+    Public Function Tangmadt() As String
+        Dim sql As String = "Select * From DOANHTHU"
         Dim str As String = dataaccess.str
         Dim con As New SqlConnection()
         con.ConnectionString = str
@@ -21,10 +21,10 @@ Public Class KhachhangDAL
         da.Fill(dt)
         Dim ma As String = ""
         If dt.Rows.Count <= 0 Then
-            ma = "KH001"
+            ma = "DT001"
         Else
             Dim k As Integer
-            ma = "KH"
+            ma = "DT"
             k = Convert.ToInt32(dt.Rows(dt.Rows.Count - 1)(0).ToString().Substring(2, 3))
             k = k + 1
             If k < 10 Then
@@ -38,3 +38,5 @@ Public Class KhachhangDAL
     End Function
 
 End Class
+
+

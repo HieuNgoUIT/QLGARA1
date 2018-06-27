@@ -1,17 +1,17 @@
 ﻿Imports QLGARADTO
 Imports QLGARADAL.data
 Imports System.Data.SqlClient
-
+Imports QLGARADAL
 Public Class PhieuThuTienDAL
     Dim dataaccess As New DataAccess
     Public Function Them(ByVal x As PhieuThuTienDTO) As String
-        Dim sql As String = "INSERT INTO PHIEUTHUTIEN(maPhieuThu,bienSo,ngayThuTien,soTienThu) VALUES(N'" & x.MaPhieuThu1.Trim & "',N'" & x.BienSo1.Trim & "',N'" & x.NgayThuTien1 & "',N'" & x.SoTienThu1 & " ')"
+        Dim sql As String = "INSERT INTO PHIEUTHUTIEN(MaPhieuThu,BienSo,NgayThuTien,SoTienThu) VALUES(N'" & x.BienSo1.Trim & "',N'" & x.MaPhieuThu1.Trim & "',N'" & x.NgayThuTien1 & "',N'" & x.SoTienThu1 & " ')"
         Return dataaccess.Thucthisql(sql)
     End Function
-    Public Function Taidulieuphieuthu() As DataTable
+    Public Function Taidulieuphieuthutien() As DataTable
         Return dataaccess.Taidulieu("SELECT * FROM PHIEUTHUTIEN")
     End Function
-    Public Function Tangmaptt() As String
+    Public Function Tangpttien() As String
         Dim sql As String = "Select * From PHIEUTHUTIEN"
         Dim str As String = dataaccess.str
         Dim con As New SqlConnection()
@@ -21,7 +21,7 @@ Public Class PhieuThuTienDAL
         da.Fill(dt)
         Dim ma As String = ""
         If dt.Rows.Count <= 0 Then
-            ma = "PT001"
+            ma = "PTT001"
         Else
             Dim k As Integer
             ma = "PT"
@@ -36,4 +36,5 @@ Public Class PhieuThuTienDAL
         End If
         Return ma
     End Function
+
 End Class
