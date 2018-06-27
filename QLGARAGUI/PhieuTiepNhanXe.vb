@@ -20,8 +20,6 @@ Public Class PhieuTiepNhanXe
     End Sub
 
     Private Sub PhieuTiepNhanXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
         ptnBUS = New PhieuNhapBUS()
         Size = New Size(523, 714)
         dtpNgayTiepNhan.Value = Date.Now
@@ -34,6 +32,7 @@ Public Class PhieuTiepNhanXe
         max = Integer.Parse(dtts.Rows(0).Item(0).ToString())
         count = Integer.Parse(dtts.Rows(0).Item(1).ToString())
         tbXeCount.Text = count
+
     End Sub
     Private Sub Luoi_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachPhieuTiepNhan.RowEnter
         Dim dong As Integer = e.RowIndex
@@ -76,9 +75,7 @@ Public Class PhieuTiepNhanXe
         dgvDanhSachPhieuTiepNhan.CurrentCell = dgvDanhSachPhieuTiepNhan(0, lastrow)
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
-    End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles tbMaChiTietPhieu.TextChanged
 
@@ -146,5 +143,18 @@ Public Class PhieuTiepNhanXe
         tbMaPhieuTiepNhan1.Text = tbMaPhieuTiepNhan.Text
         ptnBUS = New PhieuNhapBUS()
         dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieutyc(tbMaPhieuTiepNhan.Text)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        ptnBUS = New PhieuNhapBUS
+        ptnBUS.xoaphieu(tbMaPhieuTiepNhan.Text)
+        dgvDanhSachPhieuTiepNhan.DataSource = ptnBUS.Taidulieu
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        ptnBUS = New PhieuNhapBUS
+        ptnBUS.xoactphieu(tbMaChiTietPhieu.Text)
+        dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
+        tbXeCount.Text = count - 1
     End Sub
 End Class

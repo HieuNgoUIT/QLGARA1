@@ -21,6 +21,14 @@ Public Class PhieuNhapDAL
         Dim sql As String = "INSERT INTO CHITIETPHIEUTIEPNHAN(maCTPTN,maPhieuTiepNHan,bienSo) VALUES(N'" & x.MaCTPTN1.Trim & "',N'" & x.MaPhieuTiepNhan1 & "',N'" & x.BienSo1 & " ')"
         Return dataaccess.Thucthisql(sql)
     End Function
+    Public Function xoaphieu(x As String) As String
+        Dim sql As String = "DELETE FROM PHIEUTIEPNHAN WHERE maPhieuTiepNhan='" & x & "' DELETE FROM CHITIETPHIEUTIEPNHAN WHERE maPhieuTiepNhan='" & x & "' "
+        Return dataaccess.Thucthisql(sql)
+    End Function
+    Public Function xoactphieu(x As String) As String
+        Dim sql As String = "DELETE FROM CHITIETPHIEUTIEPNHAN WHERE maCTPTN='" & x & "' "
+        Return dataaccess.Thucthisql(sql)
+    End Function
     Public Function Tangma() As String
         Dim sql As String = "Select * From PHIEUTIEPNHAN"
         Dim str As String = dataaccess.str

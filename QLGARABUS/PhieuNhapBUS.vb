@@ -28,4 +28,16 @@ Public Class PhieuNhapBUS
         '2. insert to DB
         Return pnDAL.Themchitiet(pn1)
     End Function
+    Public Function xoaphieu(p As String) As String
+        '1. verify data here!!
+        pnDAL = New PhieuNhapDAL()
+        '2. insert to DB
+        Return pnDAL.xoaphieu(p)
+    End Function
+    Public Function xoactphieu(p As String) As String
+        '1. verify data here!!
+        pnDAL = New PhieuNhapDAL()
+        '2. insert to DB
+        Return pnDAL.xoactphieu(p)
+    End Function
 End Class

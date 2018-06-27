@@ -6,11 +6,14 @@ Public Class PhieuThuTien
     Dim ptBUS As PhieuThuTienBUS
     Dim khBUS As KhachHangBUS
     Dim tienno As Integer
+
     Private Sub PhieuThuTien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         phieuDAL = New PhieuThuTienDAL()
         tbMaPhieuThu.Text = phieuDAL.Tangmaptt()
         ptBUS = New PhieuThuTienBUS()
         dgvDanhSachPhieuThuTien.DataSource = ptBUS.Taidulieupt
+
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
