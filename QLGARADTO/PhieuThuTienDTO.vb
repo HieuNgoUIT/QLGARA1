@@ -20,11 +20,11 @@
             BienSo = value
         End Set
     End Property
-    Public Property NgayThuTien1 As Integer
+    Public Property NgayThuTien1 As String
         Get
             Return NgayThuTien
         End Get
-        Set(value As Integer)
+        Set(value As String)
             NgayThuTien = value
         End Set
     End Property

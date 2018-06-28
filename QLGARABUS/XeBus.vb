@@ -1,6 +1,6 @@
 ﻿Imports QLGaraDAL
-Imports QLGaraDTO
-Imports Utility
+Imports QLGARADTO
+
 Public Class XeBus
 
     Private xeDAL As XeDAL

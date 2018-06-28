@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Imports QLGARADTO
 Imports QLGARADAL.data
-Imports Utility
+
 Public Class KhachHangDAL
     Private connectionString As String
     Dim dataaccess As New DataAccess
