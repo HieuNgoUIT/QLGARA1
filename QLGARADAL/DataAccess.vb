@@ -1,11 +1,21 @@
 ﻿Imports System.Data.SqlClient
-
+Imports System.Configuration
 Namespace data
     Public Class DataAccess
 
+
         Private strConnect As New SqlConnection()
-        Public str As String = "Data Source=DESKTOP-M4843TO\SQLEXPRESS;Initial Catalog=QLGARA;Integrated Security=True"
+
+        Public str As String
         'Tạo kết nối
+        Public Sub New()
+            ' Read ConnectionString value from App.config file
+            str = ConfigurationManager.AppSettings("ConnectionString")
+        End Sub
+        Public Sub New(ConnectionString As String)
+            Me.str = ConnectionString
+        End Sub
+
         Public Sub Create_Connect()
             If strConnect.State = ConnectionState.Closed Then
                 strConnect.ConnectionString = str

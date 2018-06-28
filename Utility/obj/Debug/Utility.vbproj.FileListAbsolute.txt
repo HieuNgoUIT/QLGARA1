@@ -1,8 +1,0 @@
-C:\QLGARA\Utility\bin\Debug\Utility.dll
-C:\QLGARA\Utility\bin\Debug\Utility.pdb
-C:\QLGARA\Utility\bin\Debug\Utility.xml
-C:\QLGARA\Utility\obj\Debug\Utility.Resources.resources
-C:\QLGARA\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
-C:\QLGARA\Utility\obj\Debug\Utility.dll
-C:\QLGARA\Utility\obj\Debug\Utility.xml
-C:\QLGARA\Utility\obj\Debug\Utility.pdb

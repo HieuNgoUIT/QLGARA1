@@ -110,10 +110,6 @@
       <Project>{f079a06b-91b6-4ed8-bf51-fc80d27c8efa}</Project>
       <Name>QLGARADTO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Utility\Utility.vbproj">
-      <Project>{d6bbd303-4c54-4bb7-9127-36d68abb7af7}</Project>
-      <Name>Utility</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
