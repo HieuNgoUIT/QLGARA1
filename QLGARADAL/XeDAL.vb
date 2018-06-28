@@ -19,6 +19,9 @@ Public Class XeDAL
         Dim sql As String = "INSERT INTO XE(bienSo,maHieuXe,maKhachHang) VALUES(N'" & x.BienSo1.Trim & "',N'" & x.MaHieuXe1.Trim & "',N'" & x.MaKhachHang1.Trim & " ')"
         Return dataaccess.Thucthisql(sql)
     End Function
+    Public Function tracuuxe(x As String) As DataTable
+        Return dataaccess.Taidulieu("SELECT * FROM XE WHERE bienSo='" & x & "'")
+    End Function
     Public Function Taidulieu() As DataTable
         Return dataaccess.Taidulieu("SELECT * FROM XE")
     End Function

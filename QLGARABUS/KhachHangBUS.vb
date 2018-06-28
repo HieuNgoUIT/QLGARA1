@@ -23,7 +23,12 @@ Public Class KhachHangBUS
     Public Function Taidulieuht(mkh As String)
         Return khDAL.Taidulieuhientai(mkh)
     End Function
+    Public Function tracuukh(x As String) As DataTable
+        '1. verify data here!!
 
+        '2. insert to DB
+        Return khDAL.tracuukh(x)
+    End Function
 End Class
 
 

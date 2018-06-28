@@ -35,12 +35,16 @@ Partial Class PhieuThuTien
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.tbMaKhachHang = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.dgvDanhSachPhieuThuTien, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dtpNgayThuTien
         '
-        Me.dtpNgayThuTien.Location = New System.Drawing.Point(163, 140)
+        Me.dtpNgayThuTien.Location = New System.Drawing.Point(137, 71)
         Me.dtpNgayThuTien.Name = "dtpNgayThuTien"
         Me.dtpNgayThuTien.Size = New System.Drawing.Size(200, 20)
         Me.dtpNgayThuTien.TabIndex = 0
@@ -48,7 +52,7 @@ Partial Class PhieuThuTien
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(67, 84)
+        Me.Label1.Location = New System.Drawing.Point(24, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 1
@@ -56,23 +60,23 @@ Partial Class PhieuThuTien
         '
         'tbMaPhieuThu
         '
-        Me.tbMaPhieuThu.Location = New System.Drawing.Point(159, 81)
+        Me.tbMaPhieuThu.Location = New System.Drawing.Point(137, 28)
         Me.tbMaPhieuThu.Name = "tbMaPhieuThu"
         Me.tbMaPhieuThu.ReadOnly = True
-        Me.tbMaPhieuThu.Size = New System.Drawing.Size(100, 20)
+        Me.tbMaPhieuThu.Size = New System.Drawing.Size(200, 20)
         Me.tbMaPhieuThu.TabIndex = 2
         '
         'tbSoTienThu
         '
-        Me.tbSoTienThu.Location = New System.Drawing.Point(159, 251)
+        Me.tbSoTienThu.Location = New System.Drawing.Point(137, 170)
         Me.tbSoTienThu.Name = "tbSoTienThu"
-        Me.tbSoTienThu.Size = New System.Drawing.Size(100, 20)
+        Me.tbSoTienThu.Size = New System.Drawing.Size(200, 20)
         Me.tbSoTienThu.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(63, 140)
+        Me.Label2.Location = New System.Drawing.Point(24, 77)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 13)
         Me.Label2.TabIndex = 3
@@ -81,7 +85,7 @@ Partial Class PhieuThuTien
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(63, 254)
+        Me.Label3.Location = New System.Drawing.Point(24, 177)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 13)
         Me.Label3.TabIndex = 5
@@ -89,15 +93,15 @@ Partial Class PhieuThuTien
         '
         'tbBienSo
         '
-        Me.tbBienSo.Location = New System.Drawing.Point(163, 197)
+        Me.tbBienSo.Location = New System.Drawing.Point(137, 124)
         Me.tbBienSo.Name = "tbBienSo"
-        Me.tbBienSo.Size = New System.Drawing.Size(100, 20)
+        Me.tbBienSo.Size = New System.Drawing.Size(200, 20)
         Me.tbBienSo.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(67, 197)
+        Me.Label4.Location = New System.Drawing.Point(24, 131)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 6
@@ -105,24 +109,25 @@ Partial Class PhieuThuTien
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(408, 254)
+        Me.Button1.Location = New System.Drawing.Point(678, 112)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Nhap "
+        Me.Button1.Text = "Lưu"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'dgvDanhSachPhieuThuTien
         '
+        Me.dgvDanhSachPhieuThuTien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvDanhSachPhieuThuTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDanhSachPhieuThuTien.Location = New System.Drawing.Point(30, 351)
         Me.dgvDanhSachPhieuThuTien.Name = "dgvDanhSachPhieuThuTien"
-        Me.dgvDanhSachPhieuThuTien.Size = New System.Drawing.Size(620, 150)
+        Me.dgvDanhSachPhieuThuTien.Size = New System.Drawing.Size(713, 150)
         Me.dgvDanhSachPhieuThuTien.TabIndex = 9
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(269, 197)
+        Me.Button2.Location = New System.Drawing.Point(343, 124)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(32, 23)
         Me.Button2.TabIndex = 10
@@ -132,42 +137,75 @@ Partial Class PhieuThuTien
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(348, 207)
+        Me.Label5.Location = New System.Drawing.Point(396, 129)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 13)
+        Me.Label5.Size = New System.Drawing.Size(60, 13)
         Me.Label5.TabIndex = 11
-        Me.Label5.Text = "MAKH"
+        Me.Label5.Text = "Mã Chủ Xe"
         '
         'tbMaKhachHang
         '
-        Me.tbMaKhachHang.Location = New System.Drawing.Point(408, 207)
+        Me.tbMaKhachHang.Location = New System.Drawing.Point(462, 126)
         Me.tbMaKhachHang.Name = "tbMaKhachHang"
-        Me.tbMaKhachHang.Size = New System.Drawing.Size(100, 20)
+        Me.tbMaKhachHang.ReadOnly = True
+        Me.tbMaKhachHang.Size = New System.Drawing.Size(131, 20)
         Me.tbMaKhachHang.TabIndex = 12
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(510, 288)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Xóa"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(206, 288)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 14
+        Me.Button4.Text = "Thêm phiếu"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.tbMaPhieuThu)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.tbMaKhachHang)
+        Me.GroupBox1.Controls.Add(Me.dtpNgayThuTien)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.tbBienSo)
+        Me.GroupBox1.Controls.Add(Me.tbSoTienThu)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Location = New System.Drawing.Point(30, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(620, 221)
+        Me.GroupBox1.TabIndex = 15
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
         '
         'PhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(776, 547)
-        Me.Controls.Add(Me.tbMaKhachHang)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.dgvDanhSachPhieuThuTien)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.tbBienSo)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.tbSoTienThu)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.tbMaPhieuThu)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.dtpNgayThuTien)
         Me.Name = "PhieuThuTien"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PhieuThuTien"
         CType(Me.dgvDanhSachPhieuThuTien, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -184,4 +222,7 @@ Partial Class PhieuThuTien
     Friend WithEvents Button2 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents tbMaKhachHang As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

@@ -10,4 +10,5 @@ Public Class ThamSoDAL
         Dim sql As String = "UPDATE THAMSO SET soLuongXeTrongNgay=" & x.SoLuongXeTrongNgay1
         Return dataaccess.Thucthisql(sql)
     End Function
+
 End Class

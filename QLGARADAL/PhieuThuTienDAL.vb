@@ -8,6 +8,10 @@ Public Class PhieuThuTienDAL
         Dim sql As String = "INSERT INTO PHIEUTHUTIEN(maPhieuThu,bienSo,ngayThuTien,soTienThu) VALUES(N'" & x.MaPhieuThu1.Trim & "',N'" & x.BienSo1.Trim & "',N'" & x.NgayThuTien1 & "',N'" & x.SoTienThu1 & " ')"
         Return dataaccess.Thucthisql(sql)
     End Function
+    Public Function Xoa(x As String) As String
+        Dim sql As String = "DELETE FROM PHIEUTHUTIEN WHERE maPhieuThu='" & x & "'"
+        Return dataaccess.Thucthisql(sql)
+    End Function
     Public Function Taidulieuphieuthu() As DataTable
         Return dataaccess.Taidulieu("SELECT * FROM PHIEUTHUTIEN")
     End Function

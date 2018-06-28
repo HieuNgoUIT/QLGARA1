@@ -16,6 +16,12 @@ Public Class XeBus
         '2. insert to DB
         Return xeDAL.Them(xe)
     End Function
+    Public Function tracuuxe(x As String) As DataTable
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return xeDAL.tracuuxe(x)
+    End Function
     Public Function Taidulieu()
         Return xeDAL.Taidulieu()
     End Function

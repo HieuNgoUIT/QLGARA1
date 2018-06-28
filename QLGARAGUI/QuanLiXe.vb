@@ -7,7 +7,9 @@ Public Class QuanLiXe
     Private Sub QuanLiXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         xeBus = New XeBus()
         dgvDanhSachXe.DataSource = xeBus.Taidulieu
-
+        dgvDanhSachXe.Columns(0).HeaderText = "Biển số Xe"
+        dgvDanhSachXe.Columns(1).HeaderText = "Mã Hiệu Xe"
+        dgvDanhSachXe.Columns(2).HeaderText = "Mã Khách Hàng"
         Dim query As String
         Dim con As SqlConnection
         Dim command As SqlCommand
@@ -94,5 +96,17 @@ Public Class QuanLiXe
         MessageBox.Show("Thêm xe thành công !")
         xeBus = New XeBus()
         dgvDanhSachXe.DataSource = xeBus.Taidulieu
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        xeBus = New XeBus()
+        dgvDanhSachXe.DataSource = xeBus.tracuuxe(tbSearch.Text)
+    End Sub
+
+    Private Sub tbSearch_TextChanged(sender As Object, e As EventArgs) Handles tbSearch.TextChanged
+        If (tbSearch.Text = Nothing) Then
+            xeBus = New XeBus()
+            dgvDanhSachXe.DataSource = xeBus.Taidulieu
+        End If
     End Sub
 End Class

@@ -8,7 +8,12 @@ Public Class QuanLiKhachHang
     Private Sub QuanLiKhachHang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         khBUS = New KhachHangBUS()
         dgvDanhSachKhachHang.DataSource = khBUS.Taidulieu
-
+        dgvDanhSachKhachHang.Columns(0).HeaderText = "Mã Khách Hàng"
+        dgvDanhSachKhachHang.Columns(1).HeaderText = "Tên Chủ Xe"
+        dgvDanhSachKhachHang.Columns(2).HeaderText = "Tiền nợ"
+        dgvDanhSachKhachHang.Columns(3).HeaderText = "Email"
+        dgvDanhSachKhachHang.Columns(4).HeaderText = "Địa chỉ"
+        dgvDanhSachKhachHang.Columns(5).HeaderText = "Điện thoại"
 
     End Sub
     Private Sub Luoi_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachKhachHang.RowEnter
@@ -63,5 +68,17 @@ Public Class QuanLiKhachHang
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         khDAL = New KhachHangDAL()
         tbMaKhachHang.Text = khDAL.Tangmakh
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles tbSearch.TextChanged
+        If (tbSearch.Text = Nothing) Then
+            khBUS = New KhachHangBUS()
+            dgvDanhSachKhachHang.DataSource = khBUS.Taidulieu
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        khBUS = New KhachHangBUS()
+        dgvDanhSachKhachHang.DataSource = khBUS.tracuukh(tbSearch.Text)
     End Sub
 End Class

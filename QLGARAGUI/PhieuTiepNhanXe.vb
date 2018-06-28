@@ -5,7 +5,6 @@ Public Class PhieuTiepNhanXe
     Dim ptnBUS As PhieuNhapBUS
     Dim pnDAL As PhieuNhapDAL
     Dim tsBUS As ThamSoBUS
-
     Dim max As Integer
     Dim count As Integer
 
@@ -24,8 +23,12 @@ Public Class PhieuTiepNhanXe
         Size = New Size(523, 714)
         dtpNgayTiepNhan.Value = Date.Now
         dgvDanhSachPhieuTiepNhan.DataSource = ptnBUS.Taidulieu
+        dgvDanhSachPhieuTiepNhan.Columns(0).HeaderText = "Mã Phiếu Tiếp Nhận"
+        dgvDanhSachPhieuTiepNhan.Columns(1).HeaderText = "Ngày tiếp nhận"
         dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
-
+        dgvChiTietPhieuTiepNhan.Columns(0).HeaderText = "Mã Chi tiết Tiếp Nhận"
+        dgvChiTietPhieuTiepNhan.Columns(1).HeaderText = "Mã Phiếu Tiếp Nhận"
+        dgvChiTietPhieuTiepNhan.Columns(2).HeaderText = "Biển số"
 
         tsBUS = New ThamSoBUS()
         Dim dtts As DataTable = tsBUS.Taidulieu()
@@ -122,13 +125,14 @@ Public Class PhieuTiepNhanXe
 
             pnDAL = New PhieuNhapDAL()
             tbMaChiTietPhieu.Text = pnDAL.Tangmact
-        Else MessageBox.Show("Da tiep nhan qua 30xe !")
-
+        Else
+            MessageBox.Show("Da tiep nhan qua 30xe !")
         End If
 
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        dtpNgayTiepNhan.Value = Date.Now
         pnDAL = New PhieuNhapDAL()
         tbMaPhieuTiepNhan.Text = pnDAL.Tangma
     End Sub
@@ -149,6 +153,7 @@ Public Class PhieuTiepNhanXe
         ptnBUS = New PhieuNhapBUS
         ptnBUS.xoaphieu(tbMaPhieuTiepNhan.Text)
         dgvDanhSachPhieuTiepNhan.DataSource = ptnBUS.Taidulieu
+        dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
@@ -156,5 +161,18 @@ Public Class PhieuTiepNhanXe
         ptnBUS.xoactphieu(tbMaChiTietPhieu.Text)
         dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet
         tbXeCount.Text = count - 1
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim tsDTO As ThamSoDTO
+        tsDTO = New ThamSoDTO()
+        count = 0
+        tsDTO.SoLuongXeTrongNgay1 = count
+        tsBUS.themts(tsDTO)
+        tbXeCount.Text = tsDTO.SoLuongXeTrongNgay1
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        tbBienSo.ReadOnly = False
     End Sub
 End Class
