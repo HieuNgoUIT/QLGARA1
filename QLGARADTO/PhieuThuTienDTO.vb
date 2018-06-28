@@ -1,9 +1,8 @@
 ﻿Public Class PhieuThuTienDTO
     Private MaPhieuThu As String
     Private BienSo As String
-    Private NgayThuTien As String
+    Private NgayThuTien As Integer
     Private SoTienThu As Integer
-
     Public Property MaPhieuThu1 As String
         Get
             Return MaPhieuThu
@@ -21,12 +20,11 @@
             BienSo = value
         End Set
     End Property
-
-    Public Property NgayThuTien1 As String
+    Public Property NgayThuTien1 As Integer
         Get
             Return NgayThuTien
         End Get
-        Set(value As String)
+        Set(value As Integer)
             NgayThuTien = value
         End Set
     End Property
@@ -39,4 +37,6 @@
             SoTienThu = value
         End Set
     End Property
+
+
 End Class

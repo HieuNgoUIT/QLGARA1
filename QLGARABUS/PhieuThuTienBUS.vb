@@ -10,7 +10,7 @@ Public Class PhieuThuTienBUS
     End Function
     Public Function Taidulieupt()
         phieuDAL = New PhieuThuTienDAL()
-        Return phieuDAL.Taidulieuphieuthu()
+        Return phieuDAL.Taidulieuphieuthutien()
     End Function
     Public Function xoaphieu(x As String) As String
         '1. verify data here!!
