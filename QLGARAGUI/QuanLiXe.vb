@@ -4,6 +4,7 @@ Imports QLGARABUS
 Imports QLGARADTO
 Public Class QuanLiXe
     Dim xeBus As XeBus
+    Dim isEdit As Boolean
     Private Sub QuanLiXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         xeBus = New XeBus()
         dgvDanhSachXe.DataSource = xeBus.Taidulieu
@@ -30,6 +31,10 @@ Public Class QuanLiXe
 
 
     Private Sub Luoi_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachXe.RowEnter
+        tbBienSo.ReadOnly = True
+        cbMaHieuXe.Enabled = False
+        tbMaKhachHang.ReadOnly = True
+
         Dim dong As Integer = e.RowIndex
         tbBienSo.DataBindings.Clear()
         tbBienSo.DataBindings.Add("Text", dgvDanhSachXe.DataSource, "bienSo")
@@ -85,16 +90,24 @@ Public Class QuanLiXe
         XE.BienSo1 = tbBienSo.Text
         XE.MaHieuXe1 = cbMaHieuXe.Text
         XE.MaKhachHang1 = tbMaKhachHang.Text
-
         xeBus = New XeBus()
-        Dim ketQua As String = xeBus.themxe(XE)
-        If (ketQua <> "Success") Then
+        If (isEdit = False) Then
 
-            MessageBox.Show(ketQua)
+            Dim ketQua As String = xeBus.themxe(XE)
+            If (ketQua <> "Success") Then
 
+                MessageBox.Show(ketQua)
+
+            End If
+
+            MessageBox.Show("Thêm xe thành công !")
         End If
-        MessageBox.Show("Thêm xe thành công !")
-        xeBus = New XeBus()
+
+        If (isEdit = True) Then
+            xeBus.edit(XE)
+            isEdit = False
+        End If
+
         dgvDanhSachXe.DataSource = xeBus.Taidulieu
     End Sub
 
@@ -108,5 +121,18 @@ Public Class QuanLiXe
             xeBus = New XeBus()
             dgvDanhSachXe.DataSource = xeBus.Taidulieu
         End If
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        isEdit = True
+        tbBienSo.ReadOnly = False
+        cbMaHieuXe.Enabled = True
+        tbMaKhachHang.ReadOnly = False
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        tbBienSo.ReadOnly = False
+        cbMaHieuXe.Enabled = True
+        tbMaKhachHang.ReadOnly = False
     End Sub
 End Class

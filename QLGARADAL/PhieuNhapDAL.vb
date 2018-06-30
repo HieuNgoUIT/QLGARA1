@@ -29,6 +29,10 @@ Public Class PhieuNhapDAL
         Dim sql As String = "DELETE FROM CHITIETPHIEUTIEPNHAN WHERE maCTPTN='" & x & "' "
         Return dataaccess.Thucthisql(sql)
     End Function
+    Public Function chinhsua(x As PhieuChiTietDTO) As String
+        Dim sql As String = "UPDATE CHITIETPHIEUTIEPNHAN SET bienSo='" & x.BienSo1 & "'" & " WHERE maCTPTN='" & x.MaCTPTN1 & "' "
+        Return dataaccess.Thucthisql(sql)
+    End Function
     Public Function Tangma() As String
         Dim sql As String = "Select * From PHIEUTIEPNHAN"
         Dim str As String = dataaccess.str

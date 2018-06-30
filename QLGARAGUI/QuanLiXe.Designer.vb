@@ -37,6 +37,8 @@ Partial Class QuanLiXe
         Me.Button4 = New System.Windows.Forms.Button()
         Me.tbSearch = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.dgvDanhSachXe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -77,11 +79,11 @@ Partial Class QuanLiXe
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(585, 118)
+        Me.Button2.Location = New System.Drawing.Point(423, 325)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Thêm Xe"
+        Me.Button2.Text = "Lưu"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label8
@@ -177,11 +179,31 @@ Partial Class QuanLiXe
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "CHI TIẾT"
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(585, 174)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 26
+        Me.Button5.Text = "Edit"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(585, 106)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 27
+        Me.Button6.Text = "Thêm Xe"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'QuanLiXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(770, 634)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.tbSearch)
         Me.Controls.Add(Me.Button4)
@@ -214,4 +236,6 @@ Partial Class QuanLiXe
     Friend WithEvents Button4 As Button
     Friend WithEvents tbSearch As TextBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class

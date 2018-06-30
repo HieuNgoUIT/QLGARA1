@@ -28,6 +28,13 @@ Public Class KhachHangDAL
     Public Function tracuukh(x As String) As DataTable
         Return dataaccess.Taidulieu("SELECT * FROM KHACHHANG WHERE maKhachHang='" & x & "'")
     End Function
+    Public Function xoakh(x As String) As String
+        Return dataaccess.Thucthisql("DELETE FROM KHACHHANG WHERE maKhachHang='" & x & "' DELETE FROM XE WHERE maKhachHang='" & x & "'")
+    End Function
+    Public Function chinhsuakh(x As KhachHangDTO) As String
+        Dim sql As String = "UPDATE KHACHHANG SET tenChuXe='" & x.TenChuXe1 & "', tienNo = " & x.TienNo1 & " , email ='" & x.Email1 & "', diachi = '" & x.DiaChi1 & "', dienthoai=" & x.DienThoai1 & "  WHERE maKhachHang='" & x.MaKhachHang1 & "' "
+        Return dataaccess.Thucthisql(sql)
+    End Function
     Public Function Tangmakh() As String
         Dim sql As String = "Select * From KHACHHANG"
         Dim str As String = dataaccess.str

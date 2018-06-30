@@ -40,4 +40,9 @@ Public Class PhieuNhapBUS
         '2. insert to DB
         Return pnDAL.xoactphieu(p)
     End Function
+    Public Function chinhsua(x As PhieuChiTietDTO) As String
+        pnDAL = New PhieuNhapDAL()
+        '2. insert to DB
+        Return pnDAL.chinhsua(x)
+    End Function
 End Class

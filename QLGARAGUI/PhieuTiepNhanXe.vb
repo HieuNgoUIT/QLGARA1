@@ -7,16 +7,8 @@ Public Class PhieuTiepNhanXe
     Dim tsBUS As ThamSoBUS
     Dim max As Integer
     Dim count As Integer
+    Dim isEdit As Boolean
 
-
-
-    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachPhieuTiepNhan.CellContentClick
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 
     Private Sub PhieuTiepNhanXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ptnBUS = New PhieuNhapBUS()
@@ -43,6 +35,9 @@ Public Class PhieuTiepNhanXe
         tbMaPhieuTiepNhan.DataBindings.Add("Text", dgvDanhSachPhieuTiepNhan.DataSource, "maPhieuTiepNhan")
         dtpNgayTiepNhan.DataBindings.Clear()
         dtpNgayTiepNhan.DataBindings.Add("Value", dgvDanhSachPhieuTiepNhan.DataSource, "ngayTiepNhan")
+        If (Size = New Size(1092, 740)) Then
+            tbMaPhieuTiepNhan1.Text = tbMaPhieuTiepNhan1.Text
+        End If
     End Sub
     Private Sub Luoi_RowEnter1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvChiTietPhieuTiepNhan.RowEnter
         Dim dong As Integer = e.RowIndex
@@ -78,12 +73,6 @@ Public Class PhieuTiepNhanXe
         dgvDanhSachPhieuTiepNhan.CurrentCell = dgvDanhSachPhieuTiepNhan(0, lastrow)
     End Sub
 
-
-
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles tbMaChiTietPhieu.TextChanged
-
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim f As New QuanLiXe
         f.ShowDialog()
@@ -99,12 +88,15 @@ Public Class PhieuTiepNhanXe
         CTPN.BienSo1 = tbBienSo.Text
         CTPN.MaPhieuTiepNhan1 = tbMaPhieuTiepNhan1.Text
 
-
-        'dtpNgayTiepNhan.Format = DateTimePickerFormat.Custom
-        'dtpNgayTiepNhan.CustomFormat = "dd/MM/yyyy"
         Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
 
-        If (dtpNgayTiepNhan.Value.ToString("dd/MM/yyyy") = todaysdate And count < max) Then
+        If (dtpNgayTiepNhan.Value.ToString("dd/MM/yyyy") < todaysdate Or dtpNgayTiepNhan.Value.ToString("dd/MM/yyyy") > todaysdate) Then
+            MessageBox.Show("Chỉ có thể tiếp nhận xe trong cùng ngày")
+        ElseIf (count > max) Then
+            MessageBox.Show("Chỉ có thể tiếp nhận tối đa 30 xe trong cùng ngày")
+        End If
+        If (dtpNgayTiepNhan.Value.ToString("dd/MM/yyyy") = todaysdate And count < max And isEdit = 0) Then
+
             ptnBUS = New PhieuNhapBUS()
             Dim ketQua As String = ptnBUS.themctpn(CTPN)
             If (ketQua <> "Success") Then
@@ -125,10 +117,21 @@ Public Class PhieuTiepNhanXe
 
             pnDAL = New PhieuNhapDAL()
             tbMaChiTietPhieu.Text = pnDAL.Tangmact
-        Else
-            MessageBox.Show("Da tiep nhan qua 30xe !")
+        End If
+        If (isEdit = True) Then
+            Dim CTPN1 As PhieuChiTietDTO
+            CTPN1 = New PhieuChiTietDTO()
+            CTPN1.MaCTPTN1 = tbMaChiTietPhieu.Text
+            CTPN1.BienSo1 = tbBienSo.Text
+            ptnBUS = New PhieuNhapBUS()
+            ptnBUS.chinhsua(CTPN1)
+            isEdit = False
+            tbBienSo.ReadOnly = True
+            dgvChiTietPhieuTiepNhan.DataSource = ptnBUS.Taidulieuchitiet()
         End If
 
+
+        tbMaPhieuTiepNhan1.Text = tbMaPhieuTiepNhan.Text
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -174,5 +177,6 @@ Public Class PhieuTiepNhanXe
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         tbBienSo.ReadOnly = False
+        isEdit = True
     End Sub
 End Class

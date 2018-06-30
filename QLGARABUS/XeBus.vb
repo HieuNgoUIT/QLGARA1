@@ -28,6 +28,12 @@ Public Class XeBus
     Public Function Taidulieuhieuxe()
         Return xeDAL.Taidulieuhieuxe()
     End Function
+    Public Function xoa(s As String)
+        Return xeDAL.xoaxe(s)
+    End Function
+    Public Function edit(x As XeDTO)
+        Return xeDAL.chinhsuaxe(x)
+    End Function
 
 End Class
 

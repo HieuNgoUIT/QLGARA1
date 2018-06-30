@@ -1,7 +1,7 @@
 ﻿Public Class PhieuThuTienDTO
     Private MaPhieuThu As String
     Private BienSo As String
-    Private NgayThuTien As Integer
+    Private NgayThuTien As String
     Private SoTienThu As Integer
     Public Property MaPhieuThu1 As String
         Get

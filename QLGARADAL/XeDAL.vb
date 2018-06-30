@@ -28,5 +28,11 @@ Public Class XeDAL
     Public Function Taidulieuhieuxe() As DataTable
         Return dataaccess.Taidulieu("SELECT maHieuXe FROM HIEUXE")
     End Function
-
+    Public Function xoaxe(x As String) As String
+        Return dataaccess.Thucthisql("DELETE FROM XE WHERE bienSo='" & x & "'")
+    End Function
+    Public Function chinhsuaxe(x As XeDTO) As String
+        Dim sql As String = "UPDATE XE SET maHieuXe='" & x.MaHieuXe1 & "', maKhachHang = '" & x.MaKhachHang1 & "' WHERE bienSo='" & x.BienSo1 & "' "
+        Return dataaccess.Thucthisql(sql)
+    End Function
 End Class

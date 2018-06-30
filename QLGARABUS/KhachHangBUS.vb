@@ -29,6 +29,12 @@ Public Class KhachHangBUS
         '2. insert to DB
         Return khDAL.tracuukh(x)
     End Function
+    Public Function xoa(s As String)
+        Return khDAL.xoakh(s)
+    End Function
+    Public Function edit(x As KhachHangDTO)
+        Return khDAL.chinhsuakh(x)
+    End Function
 End Class
 
 
