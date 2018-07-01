@@ -1,65 +1,74 @@
 ﻿Public Class PhieuSuaChuaDTO
-    Private MaPhieuSuaChua As String
-    Private NgaySuaChua As String
-    Private BienSo As String
-    Private NoiDungSuaChua As String
-    Private MaVatTu As String
-    Private TienCong As Integer
-    Private ThanhTien As Integer
-    Public Property MaPhieuSuaChua1 As String
+    Private maPhieuSuaChua As String
+    Private ngaySuaChua As String
+    Private bienSo As String
+    Private noidung As String
+    Private maVatTu As String
+    Private tienCong As Integer
+    Private thanhTien As Integer
+    Private maChiTietPSC As String
+    Public Property maPhieuSuaChua1 As String
         Get
-            Return MaPhieuSuaChua
+            Return maPhieuSuaChua
         End Get
         Set(value As String)
-            MaPhieuSuaChua = value
+            maPhieuSuaChua = value
         End Set
     End Property
-    Public Property NgaySuaChua1 As String
+    Public Property maChiTietPSC1 As String
         Get
-            Return NgaySuaChua
+            Return maChiTietPSC
         End Get
         Set(value As String)
-            NgaySuaChua = value
+            maChiTietPSC = value
         End Set
     End Property
-    Public Property BienSo1 As String
+    Public Property ngaySuaChua1 As String
         Get
-            Return BienSo
+            Return ngaySuaChua
         End Get
         Set(value As String)
-            BienSo = value
+            ngaySuaChua = value
         End Set
     End Property
-    Public Property NoiDungSuaChua1 As String
+    Public Property bienSo1 As String
         Get
-            Return NoiDungSuaChua
+            Return bienSo
         End Get
         Set(value As String)
-            NoiDungSuaChua = value
+            bienSo = value
         End Set
     End Property
-    Public Property MaVatTu1 As String
+    Public Property noidung1 As String
         Get
-            Return MaVatTu
+            Return noidung
         End Get
         Set(value As String)
-            MaVatTu = value
+            noidung = value
         End Set
     End Property
-    Public Property TienCong1 As Integer
+    Public Property maVatTu1 As String
         Get
-            Return TienCong
+            Return maVatTu
+        End Get
+        Set(value As String)
+            maVatTu = value
+        End Set
+    End Property
+    Public Property tienCong1 As Integer
+        Get
+            Return tienCong
         End Get
         Set(value As Integer)
-            TienCong = value
+            tienCong = value
         End Set
     End Property
-    Public Property ThanhTien1 As Integer
+    Public Property thanhTien1 As Integer
         Get
-            Return ThanhTien
+            Return thanhTien
         End Get
         Set(value As Integer)
-            ThanhTien = value
+            thanhTien = value
         End Set
     End Property
 

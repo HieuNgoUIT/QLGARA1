@@ -1,60 +1,60 @@
 ﻿Public Class BaoCaoTonDTO
-    Private MaBaoCaoTon As String
-    Private ThangBaoCao As String
-    Private MaVatTu As String
-    Private TonDau As Integer
-    Private PhatSinh As Integer
-    Private TonCuoi As Integer
-    Public Property MaBaoCaoTon1 As String
+    Private maBaoCaoTon As String
+    Private thangBaoCao As String
+    Private maVatTu As String
+    Private tonDau As Integer
+    Private phatSinh As Integer
+    Private tonCuoi As Integer
+    Public Property maBaoCaoTon1 As String
         Get
-            Return MaBaoCaoTon
+            Return maBaoCaoTon
         End Get
         Set(value As String)
-            MaBaoCaoTon = value
+            maBaoCaoTon = value
         End Set
     End Property
 
-    Public Property ThangBaoCao1 As String
+    Public Property thangBaoCao1 As String
         Get
-            Return ThangBaoCao
+            Return thangBaoCao
         End Get
         Set(value As String)
-            ThangBaoCao = value
+            thangBaoCao = value
         End Set
     End Property
 
-    Public Property MaVatTu1 As String
+    Public Property maVatTu1 As String
         Get
-            Return MaVatTu
+            Return maVatTu
         End Get
         Set(value As String)
-            MaVatTu = value
+            maVatTu = value
         End Set
     End Property
-    Public Property TonDau1 As Integer
+    Public Property tonDau1 As Integer
         Get
-            Return TonDau
+            Return tonDau
         End Get
         Set(value As Integer)
-            TonDau = value
-        End Set
-    End Property
-
-    Public Property PhatSinh1 As Integer
-        Get
-            Return PhatSinh
-        End Get
-        Set(value As Integer)
-            PhatSinh = value
+            tonDau = value
         End Set
     End Property
 
-    Public Property TonCuoi1 As Integer
+    Public Property phatSinh1 As Integer
         Get
-            Return TonCuoi
+            Return phatSinh
         End Get
         Set(value As Integer)
-            TonCuoi = value
+            phatSinh = value
+        End Set
+    End Property
+
+    Public Property tonCuoi1 As Integer
+        Get
+            Return tonCuoi
+        End Get
+        Set(value As Integer)
+            tonCuoi = value
         End Set
     End Property
 End Class
