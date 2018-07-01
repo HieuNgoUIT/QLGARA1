@@ -2,6 +2,8 @@
 Imports QLGARADAL
 Public Class DoanhThuBUS
     Dim DTDAL As DoanhThuDAL
+    Private connectionString As String
+
     Public Function themdoanhthu(ByVal doanhthu As DoanhThuDTO) As String
         '1. verify data here!!
         DTDAL = New DoanhThuDAL()
@@ -12,4 +14,20 @@ Public Class DoanhThuBUS
         DTDAL = New DoanhThuDAL()
         Return DTDAL.Taidulieudoanhthu()
     End Function
+    Public Function taidulieuthang() As DataTable
+        Return DTDAL.taidulieuthanhtien()
+    End Function
+    Public Function taidulieutongdoanhthu() As DataTable
+        Return DTDAL.taidulieuthanhtien()
+    End Function
+    Public Function taidulieumaphieusuachua() As DataTable
+        Return DTDAL.taidulieuthanhtien()
+    End Function
+    Public Function taidulieusoluotsua() As DataTable
+        Return DTDAL.taidulieuthanhtien()
+    End Function
+    Public Function taidulieuthanhtien() As DataTable
+        Return DTDAL.taidulieuthanhtien()
+    End Function
+
 End Class

@@ -1,15 +1,27 @@
-﻿Imports QLGARADTO
-Imports QLGARADAL
-Public Class VatTuBUS
-    Dim VTDAL As VatTuDAL
-    Public Function themvattu(ByVal vattu As vatTuDTO) As String
+﻿Imports QLGARADAL
+Imports QLGARADTO
+
+Public Class VatTuBus
+
+    Private vatTuDAL As VatTuDAL
+    Public Sub New()
+        vatTuDAL = New VatTuDAL()
+    End Sub
+    Public Sub New(connectionString As String)
+        vatTuDAL = New VatTuDAL(connectionString)
+    End Sub
+    Public Function themmavattu(ByVal vattu As vatTuDTO) As String
         '1. verify data here!!
-        VTDAL = New VatTuDAL()
+
         '2. insert to DB
-        Return VTDAL.Them(vattu)
+        Return vatTuDAL.Them(vattu)
     End Function
-    Public Function Taidulieuvt()
-        VTDAL = New VatTuDAL()
-        Return VTDAL.Taidulieuvattu()
+
+    Public Function Taidulieutenvattu()
+        Return vatTuDAL.Taidulieutenvattu()
     End Function
+    Public Function Taidulieudongia()
+        Return vatTuDAL.Taidulieudongia()
+    End Function
+
 End Class
