@@ -63,10 +63,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTonBUS.vb" />
+    <Compile Include="DoanhThuBUS.vb" />
     <Compile Include="KhachHangBUS.vb" />
     <Compile Include="PhieuNhapBUS.vb" />
+    <Compile Include="PhieuSuaChuaBUS.vb" />
     <Compile Include="PhieuThuTienBUS.vb" />
     <Compile Include="ThamSoBUS.vb" />
+    <Compile Include="VatTuBUS.vb" />
     <Compile Include="XeBus.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

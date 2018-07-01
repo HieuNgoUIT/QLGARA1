@@ -22,3 +22,7 @@ C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.QuanLiXe.resources
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.QuanLiKhachHang.resources
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.PhieuTiepNhanXe.resources
 C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.PhieuThuTien.resources
+C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.BaoCaoTon.resources
+C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.DoanhThu.resources
+C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.PhieuSuaChua.resources
+C:\QLGARA\QLGARAGUI\obj\Debug\QLGARAGUI.VatTu.resources

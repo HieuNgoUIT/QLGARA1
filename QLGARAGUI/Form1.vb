@@ -26,4 +26,28 @@
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub QuanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuanToolStripMenuItem.Click
+        Dim frm As VatTu = New VatTu()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub PhiếuSữaChữaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PhiếuSữaChữaToolStripMenuItem.Click
+        Dim frm As PhieuSuaChua = New PhieuSuaChua()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub DoanhThuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DoanhThuToolStripMenuItem.Click
+        Dim frm As DoanhThu = New DoanhThu()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub BáoCáoTồnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BáoCáoTồnToolStripMenuItem.Click
+        Dim frm As BaoCaoTon = New BaoCaoTon()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

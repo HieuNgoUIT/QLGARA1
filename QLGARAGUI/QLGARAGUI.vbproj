@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTon.Designer.vb">
+      <DependentUpon>BaoCaoTon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoTon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhThu.Designer.vb">
+      <DependentUpon>DoanhThu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhThu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PhieuSuaChua.Designer.vb">
+      <DependentUpon>PhieuSuaChua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuSuaChua.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="PhieuThuTien.Designer.vb">
       <DependentUpon>PhieuThuTien.vb</DependentUpon>
@@ -118,8 +136,20 @@
     <Compile Include="QuanLiXe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VatTu.Designer.vb">
+      <DependentUpon>VatTu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VatTu.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BaoCaoTon.resx">
+      <DependentUpon>BaoCaoTon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhThu.resx">
+      <DependentUpon>DoanhThu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +158,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuSuaChua.resx">
+      <DependentUpon>PhieuSuaChua.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuThuTien.resx">
       <DependentUpon>PhieuThuTien.vb</DependentUpon>
@@ -140,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLiXe.resx">
       <DependentUpon>QuanLiXe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VatTu.resx">
+      <DependentUpon>VatTu.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

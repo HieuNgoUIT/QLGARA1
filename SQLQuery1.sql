@@ -69,7 +69,7 @@ CREATE TABLE VATTU
 
 CREATE TABLE CHITIETPSC
 (
-        maChiTietPSC nvarchar(10) PRIMARY KEY,
+    maChiTietPSC nvarchar(10) PRIMARY KEY,
 	maPSC nvarchar(10) ,
 	ngaySuaChua datetime2,
 	bienSo nvarchar(10) FOREIGN KEY REFERENCES XE(bienSO),
@@ -121,3 +121,5 @@ INSERT INTO HIEUXE(maHieuXe,tenHieuXe) VALUES('AD','AUDI')
 INSERT INTO HIEUXE(maHieuXe,tenHieuXe) VALUES('GE','GENESIS')
 INSERT INTO HIEUXE(maHieuXe,tenHieuXe) VALUES('TF','TOMFORD')
 INSERT INTO THAMSO(soLuongNhapToiDa,soLuongXeTrongNgay) VALUES (30,0)
+
+

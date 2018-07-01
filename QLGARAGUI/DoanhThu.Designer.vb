@@ -27,6 +27,8 @@ Partial Class DoanhThu
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.tbTongDoanhThu = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.dgvPhieuThuTien = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvPhieuThuTien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -63,18 +65,27 @@ Partial Class DoanhThu
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(349, 262)
+        Me.Button1.Location = New System.Drawing.Point(342, 327)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 39)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'dgvPhieuThuTien
+        '
+        Me.dgvPhieuThuTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPhieuThuTien.Location = New System.Drawing.Point(65, 157)
+        Me.dgvPhieuThuTien.Name = "dgvPhieuThuTien"
+        Me.dgvPhieuThuTien.Size = New System.Drawing.Size(525, 150)
+        Me.dgvPhieuThuTien.TabIndex = 11
+        '
         'DoanhThu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.dgvPhieuThuTien)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.tbTongDoanhThu)
         Me.Controls.Add(Me.TextBox3)
@@ -82,6 +93,7 @@ Partial Class DoanhThu
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "DoanhThu"
         Me.Text = "DoanhThu"
+        CType(Me.dgvPhieuThuTien, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -92,4 +104,5 @@ Partial Class DoanhThu
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents tbTongDoanhThu As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents dgvPhieuThuTien As DataGridView
 End Class
