@@ -66,22 +66,19 @@ CREATE TABLE VATTU
 	donGia int
 )
 
-CREATE TABLE PHIEUSUACHUA
-(
-	maPSC nvarchar(10) PRIMARY KEY,
-	ngaySuaChua datetime2
-)
 
 CREATE TABLE CHITIETPSC
 (
-	maChiTietPSC nvarchar(10) PRIMARY KEY,
-	maPSC nvarchar(10) FOREIGN KEY REFERENCES PHIEUSUACHUA(maPSC),
-	bienSo nvarchar(10) FOREIGN KEY REFERENCES Xe(bienSO),
+        maChiTietPSC nvarchar(10) PRIMARY KEY,
+	maPSC nvarchar(10) ,
+	ngaySuaChua datetime2,
+	bienSo nvarchar(10) FOREIGN KEY REFERENCES XE(bienSO),
 	noidung nvarchar(10),
 	maVatTu nvarchar(10) FOREIGN KEY REFERENCES VATTU(maVatTu),
-	tienCong int,
+	tienCong int ,
 	thanhTien int
 )
+
 
 CREATE TABLE PHIEUTHUTIEN
 (
@@ -94,7 +91,7 @@ CREATE TABLE DOANHTHU
 (
 	thang int,
 	tongDoanhThu int,
-	maChiTietPSC nvarchar(10) FOREIGN KEY REFERENCES CHITIETPSC(maChiTietPSC),
+	
 	soLuotSua int	
 )
 CREATE TABLE BAOCAOTON
