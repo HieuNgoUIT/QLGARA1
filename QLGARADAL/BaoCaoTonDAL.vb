@@ -5,13 +5,13 @@ Imports QLGARADAL
 Public Class BaoCaoTonDAL
     Dim dataaccess As New DataAccess
     Public Function Them(ByVal x As BaoCaoTonDTO) As String
-        Dim sql As String = "INSERT INTO BAOCAOTON(MaBaoCaoTon,ThangBaoCao,MaVatTu,TonDau,PhatSinh,TonCuoi) VALUES(N'" & x.MaBaoCaoTon1.Trim & "',N'" & x.ThangBaoCao1.Trim & "',N'" & x.MaVatTu1.Trim & "',,N'" & x.TonDau1 & " ',,N'" & x.PhatSinh1 & " ',,N'" & x.TonCuoi1 & " ')"
+        Dim sql As String = "INSERT INTO BAOCAOTON(maBaoCaoTon,thangBaoCao,maVatTu,tonDau,phatSinh,tonCuoi) VALUES(N'" & x.maBaoCaoTon1.Trim & "',N'" & x.thangBaoCao1.Trim & "',N'" & x.maVatTu1.Trim & "',,N'" & x.tonDau1 & " ',,N'" & x.phatSinh1 & " ',,N'" & x.tonCuoi1 & " ')"
         Return dataaccess.Thucthisql(sql)
     End Function
     Public Function Taidulieubaocaoton() As DataTable
         Return dataaccess.Taidulieu("SELECT * FROM BAOCAOTON")
     End Function
-    Public Function Tangbct() As String
+    Public Function Tangmabct() As String
         Dim sql As String = "Select * From BAOCAOTON"
         Dim str As String = dataaccess.str
         Dim con As New SqlConnection()
@@ -35,6 +35,24 @@ Public Class BaoCaoTonDAL
             ma = ma + k.ToString()
         End If
         Return ma
+    End Function
+    Public Function taidulieumabaocaoton() As DataTable
+        Return dataaccess.taidulieu("SELECT maBaoCaoTon FROM BAOCAOTON")
+    End Function
+    Public Function taidulieuthangbaocao() As DataTable
+        Return dataaccess.taidulieu("SELECT thangBaoCao FROM BAOCAOTON")
+    End Function
+    Public Function taidulieumavattu() As DataTable
+        Return dataaccess.taidulieu("SELECT maVatTu FROM BAOCAOTON")
+    End Function
+    Public Function taidulieutondau() As DataTable
+        Return dataaccess.taidulieu("SELECT tonDau FROM BAOCAOTON")
+    End Function
+    Public Function taidulieuphatsinh() As DataTable
+        Return dataaccess.taidulieu("SELECT phatSinh FROM BAOCAOTON")
+    End Function
+    Public Function taidulieutoncuoi() As DataTable
+        Return dataaccess.taidulieu("SELECT tonCuoi FROM BAOCAOTON")
     End Function
 
 End Class

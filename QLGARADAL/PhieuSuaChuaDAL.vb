@@ -1,10 +1,15 @@
 ﻿Imports QLGARADTO
-Imports QLGARADAL.data
+Imports QLGARADAL
 Imports System.Data.SqlClient
+Imports System.Configuration
+Imports QLGARADAL.data
+
 Public Class PhieuSuaChuaDAL
     Dim dataaccess As New DataAccess
+    Dim connectionString As String
+
     Public Function Them(ByVal x As PhieuSuaChuaDTO) As String
-        Dim sql As String = "INSERT INTO CHITIETPSC(MaPhieuSuaChua,BienSo,NoiDungSuaChua,MaVatTu,TienCong,ThanhTien) VALUES(N'" & x.MaPhieuSuaChua1.Trim & "',N'" & x.BienSo1.Trim & "',N'" & x.NoiDungSuaChua1.Trim & "',N'" & x.MaVatTu1.Trim & " ',N'" & x.TienCong1.Trim & "',N'" & x.ThanhTien1.Trim & "')"
+        Dim sql As String = "INSERT INTO CHITIETPSC(maChiTietPSC,maPSC,bienSo,noidung,maVatTu,tienCong,thanhTien) VALUES(N'" & x.maChiTietPSC1.Trim & "',N'" & x.maPhieuSuaChua1.Trim & "',N'" & x.bienSo1.Trim & "',N'" & x.noidung1.Trim & "',N'" & x.maVatTu1.Trim & " ',N'" & x.tienCong1 & "',N'" & x.thanhTien1 & "')"
         Return dataaccess.Thucthisql(sql)
     End Function
     Public Function Taidulieuphieusuachua() As DataTable
@@ -35,5 +40,30 @@ Public Class PhieuSuaChuaDAL
         End If
         Return ma
     End Function
+    Public Function taidulieumaphieusuachua() As DataTable
+        Return dataaccess.Taidulieu("SELECT maChiTietPSC FROM CHITIETPSC")
+    End Function
+    Public Function Taidulieungaysuachua() As DataTable
+        Return dataaccess.Taidulieu("SELECT ngaySuaChua FROM PHIEUSUACHUA")
+    End Function
+    Public Function Taidulieubienso() As DataTable
+        Return dataaccess.Taidulieu("SELECT bienSo FROM CHITIETPSC")
+    End Function
+    Public Function taidulieunoidungsuachua() As DataTable
+        Return dataaccess.Taidulieu("SELECT noiDung from CHITIETPSC")
+    End Function
+    Public Function taidulieumavattu() As DataTable
+        Return dataaccess.Taidulieu("SELECT maVatTu from CHITIETPSC")
+    End Function
+    Public Function taidulieutiencong() As DataTable
+        Return dataaccess.Taidulieu("SELECT tienCong from CHITIETPSC")
+    End Function
+    Public Function taidulieuthanhtien() As DataTable
+        Return dataaccess.Taidulieu("SELECT thanhTien from CHITIETPSC")
+    End Function
+
+
+
+
 
 End Class
