@@ -7,6 +7,7 @@ Public Class PhieuThuTien
     Dim khBUS As KhachHangBUS
     Dim tienno As Integer
 
+
     Private Sub PhieuThuTien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dtpNgayThuTien.Value = Date.Now
         phieuDAL = New PhieuThuTienDAL()
@@ -20,6 +21,12 @@ Public Class PhieuThuTien
 
     End Sub
     Private Sub Luoi_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachPhieuThuTien.RowEnter
+        tbBienSo.ReadOnly = True
+
+        tbSoTienThu.ReadOnly = True
+        dtpNgayThuTien.Enabled = False
+
+
         Dim dong As Integer = e.RowIndex
         tbMaPhieuThu.DataBindings.Clear()
         tbMaPhieuThu.DataBindings.Add("Text", dgvDanhSachPhieuThuTien.DataSource, "maPhieuThu")
@@ -38,14 +45,17 @@ Public Class PhieuThuTien
         Dim dtts As DataTable = khBUS.Taidulieuht(khhientai)
         tienno = Integer.Parse(dtts.Rows(0).Item(2).ToString())
 
+        Dim PT As PhieuThuTienDTO
+        PT = New PhieuThuTienDTO()
+        PT.MaPhieuThu1 = tbMaPhieuThu.Text
+        PT.NgayThuTien1 = dtpNgayThuTien.Value
+        PT.SoTienThu1 = tbSoTienThu.Text
+        PT.BienSo1 = tbBienSo.Text
+
+
 
         If (Integer.Parse(tbSoTienThu.Text) < tienno) Then
-            Dim PT As PhieuThuTienDTO
-            PT = New PhieuThuTienDTO()
-            PT.MaPhieuThu1 = tbMaPhieuThu.Text
-            PT.NgayThuTien1 = dtpNgayThuTien.Value
-            PT.SoTienThu1 = tbSoTienThu.Text
-            PT.BienSo1 = tbBienSo.Text
+
 
             ptBUS = New PhieuThuTienBUS()
             Dim ketQua As String = ptBUS.themphieu(PT)
@@ -62,6 +72,8 @@ Public Class PhieuThuTien
             tbMaPhieuThu.Text = phieuDAL.Tangmaptt()
         Else MessageBox.Show("so tien thu > tien no :" & tienno)
         End If
+
+
 
 
     End Sub
@@ -82,8 +94,42 @@ Public Class PhieuThuTien
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        tbBienSo.ReadOnly = False
+
+        tbSoTienThu.ReadOnly = False
+        dtpNgayThuTien.Enabled = True
+        tbBienSo.Text = Nothing
+        tbSoTienThu.Text = Nothing
+
+
         phieuDAL = New PhieuThuTienDAL()
         tbMaPhieuThu.Text = phieuDAL.Tangmaptt()
         dtpNgayThuTien.Value = Date.Now
+
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+        tbBienSo.ReadOnly = False
+
+        tbSoTienThu.ReadOnly = False
+        dtpNgayThuTien.Enabled = True
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim PT As PhieuThuTienDTO
+        PT = New PhieuThuTienDTO()
+        PT.MaPhieuThu1 = tbMaPhieuThu.Text
+        PT.NgayThuTien1 = dtpNgayThuTien.Value
+        PT.SoTienThu1 = tbSoTienThu.Text
+        PT.BienSo1 = tbBienSo.Text
+
+        ptBUS = New PhieuThuTienBUS()
+        ptBUS.edit(PT)
+        dgvDanhSachPhieuThuTien.DataSource = ptBUS.Taidulieupt
+
+
     End Sub
 End Class

@@ -12,6 +12,10 @@ Public Class PhieuThuTienBUS
         phieuDAL = New PhieuThuTienDAL()
         Return phieuDAL.Taidulieuphieuthu()
     End Function
+    Public Function edit(x As PhieuThuTienDTO)
+        phieuDAL = New PhieuThuTienDAL()
+        Return phieuDAL.chinhsua(x)
+    End Function
     Public Function xoaphieu(x As String) As String
         '1. verify data here!!
         phieuDAL = New PhieuThuTienDAL()

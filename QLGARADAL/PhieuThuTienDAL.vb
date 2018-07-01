@@ -15,6 +15,10 @@ Public Class PhieuThuTienDAL
     Public Function Taidulieuphieuthu() As DataTable
         Return dataaccess.Taidulieu("SELECT * FROM PHIEUTHUTIEN")
     End Function
+    Public Function chinhsua(x As PhieuThuTienDTO) As String
+        Dim sql As String = "UPDATE PHIEUTHUTIEN SET bienSo='" & x.BienSo1 & "', ngayThuTien = '" & x.NgayThuTien1 & "' , soTienthu=" & x.SoTienThu1 & " WHERE maPhieuThu='" & x.MaPhieuThu1 & "' "
+        Return dataaccess.Thucthisql(sql)
+    End Function
     Public Function Tangmaptt() As String
         Dim sql As String = "Select * From PHIEUTHUTIEN"
         Dim str As String = dataaccess.str

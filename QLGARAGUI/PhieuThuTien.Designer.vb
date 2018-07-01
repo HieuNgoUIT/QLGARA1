@@ -38,6 +38,8 @@ Partial Class PhieuThuTien
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.dgvDanhSachPhieuThuTien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -162,7 +164,7 @@ Partial Class PhieuThuTien
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(343, 276)
+        Me.Button1.Location = New System.Drawing.Point(209, 276)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 15
@@ -189,11 +191,31 @@ Partial Class PhieuThuTien
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(672, 224)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 17
+        Me.Button5.Text = "Edit"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(446, 276)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 18
+        Me.Button6.Text = "Sửa"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'PhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 506)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button4)
@@ -225,4 +247,6 @@ Partial Class PhieuThuTien
     Friend WithEvents Button4 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
