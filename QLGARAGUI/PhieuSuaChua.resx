@@ -117,4 +117,415 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbMaPhieuSuaChua.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 57</value>
+  </data>
+  <data name="tbMaPhieuSuaChua.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbMaPhieuSuaChua.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbMaPhieuSuaChua.Name" xml:space="preserve">
+    <value>tbMaPhieuSuaChua</value>
+  </data>
+  <data name="&gt;&gt;tbMaPhieuSuaChua.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbMaPhieuSuaChua.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbMaPhieuSuaChua.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="TextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 100</value>
+  </data>
+  <data name="TextBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TextBox3.Text" xml:space="preserve">
+    <value>Ngày Sữa Chữa</value>
+  </data>
+  <data name="&gt;&gt;TextBox3.Name" xml:space="preserve">
+    <value>TextBox3</value>
+  </data>
+  <data name="&gt;&gt;TextBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox3.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="tbNgaySuaChua.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 100</value>
+  </data>
+  <data name="tbNgaySuaChua.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="tbNgaySuaChua.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbNgaySuaChua.Name" xml:space="preserve">
+    <value>tbNgaySuaChua</value>
+  </data>
+  <data name="&gt;&gt;tbNgaySuaChua.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbNgaySuaChua.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbNgaySuaChua.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="TextBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 140</value>
+  </data>
+  <data name="TextBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="TextBox5.Text" xml:space="preserve">
+    <value>Biển Số</value>
+  </data>
+  <data name="&gt;&gt;TextBox5.Name" xml:space="preserve">
+    <value>TextBox5</value>
+  </data>
+  <data name="&gt;&gt;TextBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox5.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="tbBienSo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 140</value>
+  </data>
+  <data name="tbBienSo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="tbBienSo.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tbBienSo.Name" xml:space="preserve">
+    <value>tbBienSo</value>
+  </data>
+  <data name="&gt;&gt;tbBienSo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbBienSo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbBienSo.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="TextBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 180</value>
+  </data>
+  <data name="TextBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="TextBox7.Text" xml:space="preserve">
+    <value>Nội Dung Sữa Chữa</value>
+  </data>
+  <data name="&gt;&gt;TextBox7.Name" xml:space="preserve">
+    <value>TextBox7</value>
+  </data>
+  <data name="&gt;&gt;TextBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox7.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tbNoiDungSuaChua.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 180</value>
+  </data>
+  <data name="tbNoiDungSuaChua.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="tbNoiDungSuaChua.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tbNoiDungSuaChua.Name" xml:space="preserve">
+    <value>tbNoiDungSuaChua</value>
+  </data>
+  <data name="&gt;&gt;tbNoiDungSuaChua.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbNoiDungSuaChua.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbNoiDungSuaChua.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="TextBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 226</value>
+  </data>
+  <data name="TextBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="TextBox9.Text" xml:space="preserve">
+    <value>Mã Vật Tư</value>
+  </data>
+  <data name="&gt;&gt;TextBox9.Name" xml:space="preserve">
+    <value>TextBox9</value>
+  </data>
+  <data name="&gt;&gt;TextBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox9.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tbMaVatTu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 226</value>
+  </data>
+  <data name="tbMaVatTu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="tbMaVatTu.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;tbMaVatTu.Name" xml:space="preserve">
+    <value>tbMaVatTu</value>
+  </data>
+  <data name="&gt;&gt;tbMaVatTu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbMaVatTu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbMaVatTu.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TextBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 272</value>
+  </data>
+  <data name="TextBox11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox11.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="TextBox11.Text" xml:space="preserve">
+    <value>Tiền Công</value>
+  </data>
+  <data name="&gt;&gt;TextBox11.Name" xml:space="preserve">
+    <value>TextBox11</value>
+  </data>
+  <data name="&gt;&gt;TextBox11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox11.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tbTienCong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 272</value>
+  </data>
+  <data name="tbTienCong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="tbTienCong.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;tbTienCong.Name" xml:space="preserve">
+    <value>tbTienCong</value>
+  </data>
+  <data name="&gt;&gt;tbTienCong.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbTienCong.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbTienCong.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TextBox13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 314</value>
+  </data>
+  <data name="TextBox13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox13.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="TextBox13.Text" xml:space="preserve">
+    <value>ThanhTien</value>
+  </data>
+  <data name="&gt;&gt;TextBox13.Name" xml:space="preserve">
+    <value>TextBox13</value>
+  </data>
+  <data name="&gt;&gt;TextBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox13.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox13.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tbThanhTien.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 314</value>
+  </data>
+  <data name="tbThanhTien.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="tbThanhTien.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;tbThanhTien.Name" xml:space="preserve">
+    <value>tbThanhTien</value>
+  </data>
+  <data name="&gt;&gt;tbThanhTien.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbThanhTien.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbThanhTien.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 384</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 57</value>
+  </data>
+  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>Mã Phiếu Sữa Chữa</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
+    <value>TextBox1</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 21</value>
+  </data>
+  <data name="TextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="TextBox2.Text" xml:space="preserve">
+    <value>Mã Chi Tiết Phiếu Sữa Chữa</value>
+  </data>
+  <data name="&gt;&gt;TextBox2.Name" xml:space="preserve">
+    <value>TextBox2</value>
+  </data>
+  <data name="&gt;&gt;TextBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbMaChiTietPSC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="tbMaChiTietPSC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="tbMaChiTietPSC.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tbMaChiTietPSC.Name" xml:space="preserve">
+    <value>tbMaChiTietPSC</value>
+  </data>
+  <data name="&gt;&gt;tbMaChiTietPSC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbMaChiTietPSC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbMaChiTietPSC.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>740, 491</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PhieuSuaChua</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PhieuSuaChua</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -23,17 +23,17 @@ Partial Class BaoCaoTon
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tbMaBaoCaoTon = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.tbThangBaoCao = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.tbMaVatTu = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.tbTonDau = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.tbPhatSinh = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.tbTonCuoi = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -46,12 +46,12 @@ Partial Class BaoCaoTon
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "Mã Báo Cáo Tồn"
         '
-        'TextBox2
+        'tbMaBaoCaoTon
         '
-        Me.TextBox2.Location = New System.Drawing.Point(189, 44)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(479, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.tbMaBaoCaoTon.Location = New System.Drawing.Point(189, 44)
+        Me.tbMaBaoCaoTon.Name = "tbMaBaoCaoTon"
+        Me.tbMaBaoCaoTon.Size = New System.Drawing.Size(479, 20)
+        Me.tbMaBaoCaoTon.TabIndex = 1
         '
         'TextBox3
         '
@@ -62,12 +62,12 @@ Partial Class BaoCaoTon
         Me.TextBox3.TabIndex = 2
         Me.TextBox3.Text = "Tháng Báo Cáo"
         '
-        'TextBox4
+        'tbThangBaoCao
         '
-        Me.TextBox4.Location = New System.Drawing.Point(189, 83)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(479, 20)
-        Me.TextBox4.TabIndex = 3
+        Me.tbThangBaoCao.Location = New System.Drawing.Point(189, 83)
+        Me.tbThangBaoCao.Name = "tbThangBaoCao"
+        Me.tbThangBaoCao.Size = New System.Drawing.Size(479, 20)
+        Me.tbThangBaoCao.TabIndex = 3
         '
         'TextBox5
         '
@@ -78,12 +78,12 @@ Partial Class BaoCaoTon
         Me.TextBox5.TabIndex = 4
         Me.TextBox5.Text = "Mã Vật Tư"
         '
-        'TextBox6
+        'tbMaVatTu
         '
-        Me.TextBox6.Location = New System.Drawing.Point(189, 127)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(479, 20)
-        Me.TextBox6.TabIndex = 5
+        Me.tbMaVatTu.Location = New System.Drawing.Point(189, 127)
+        Me.tbMaVatTu.Name = "tbMaVatTu"
+        Me.tbMaVatTu.Size = New System.Drawing.Size(479, 20)
+        Me.tbMaVatTu.TabIndex = 5
         '
         'TextBox7
         '
@@ -94,12 +94,12 @@ Partial Class BaoCaoTon
         Me.TextBox7.TabIndex = 6
         Me.TextBox7.Text = "Tồn Đầu"
         '
-        'TextBox8
+        'tbTonDau
         '
-        Me.TextBox8.Location = New System.Drawing.Point(189, 175)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(479, 20)
-        Me.TextBox8.TabIndex = 7
+        Me.tbTonDau.Location = New System.Drawing.Point(189, 175)
+        Me.tbTonDau.Name = "tbTonDau"
+        Me.tbTonDau.Size = New System.Drawing.Size(479, 20)
+        Me.tbTonDau.TabIndex = 7
         '
         'TextBox9
         '
@@ -110,12 +110,12 @@ Partial Class BaoCaoTon
         Me.TextBox9.TabIndex = 8
         Me.TextBox9.Text = "Phát Sinh"
         '
-        'TextBox10
+        'tbPhatSinh
         '
-        Me.TextBox10.Location = New System.Drawing.Point(189, 226)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(479, 20)
-        Me.TextBox10.TabIndex = 9
+        Me.tbPhatSinh.Location = New System.Drawing.Point(189, 226)
+        Me.tbPhatSinh.Name = "tbPhatSinh"
+        Me.tbPhatSinh.Size = New System.Drawing.Size(479, 20)
+        Me.tbPhatSinh.TabIndex = 9
         '
         'TextBox11
         '
@@ -126,12 +126,12 @@ Partial Class BaoCaoTon
         Me.TextBox11.TabIndex = 10
         Me.TextBox11.Text = "Tồn Cuối"
         '
-        'TextBox12
+        'tbTonCuoi
         '
-        Me.TextBox12.Location = New System.Drawing.Point(189, 273)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(479, 20)
-        Me.TextBox12.TabIndex = 11
+        Me.tbTonCuoi.Location = New System.Drawing.Point(189, 273)
+        Me.tbTonCuoi.Name = "tbTonCuoi"
+        Me.tbTonCuoi.Size = New System.Drawing.Size(479, 20)
+        Me.tbTonCuoi.TabIndex = 11
         '
         'Button1
         '
@@ -148,17 +148,17 @@ Partial Class BaoCaoTon
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox12)
+        Me.Controls.Add(Me.tbTonCuoi)
         Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.tbPhatSinh)
         Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.tbTonDau)
         Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.tbMaVatTu)
         Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.tbThangBaoCao)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.tbMaBaoCaoTon)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "BaoCaoTon"
         Me.Text = "BaoCaoTon"
@@ -168,16 +168,16 @@ Partial Class BaoCaoTon
     End Sub
 
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents tbMaBaoCaoTon As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents tbThangBaoCao As System.Windows.Forms.TextBox
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents tbMaVatTu As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents tbTonDau As System.Windows.Forms.TextBox
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents tbPhatSinh As System.Windows.Forms.TextBox
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents tbTonCuoi As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
