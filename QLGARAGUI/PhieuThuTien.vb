@@ -53,8 +53,10 @@ Public Class PhieuThuTien
         PT.BienSo1 = tbBienSo.Text
 
 
-
-        If (Integer.Parse(tbSoTienThu.Text) < tienno) Then
+        If (tienno = 0) Then
+            ptBUS = New PhieuThuTienBUS()
+            ptBUS.themphieu(PT)
+        ElseIf (Integer.Parse(tbSoTienThu.Text) < tienno) Then
 
 
             ptBUS = New PhieuThuTienBUS()
@@ -66,15 +68,15 @@ Public Class PhieuThuTien
             End If
             MessageBox.Show("Thêm PN thành công !")
 
-            ptBUS = New PhieuThuTienBUS()
-            dgvDanhSachPhieuThuTien.DataSource = ptBUS.Taidulieupt
-            phieuDAL = New PhieuThuTienDAL()
-            tbMaPhieuThu.Text = phieuDAL.Tangmaptt()
+
         Else MessageBox.Show("so tien thu > tien no :" & tienno)
         End If
 
 
-
+        ptBUS = New PhieuThuTienBUS()
+        dgvDanhSachPhieuThuTien.DataSource = ptBUS.Taidulieupt
+        phieuDAL = New PhieuThuTienDAL()
+        tbMaPhieuThu.Text = phieuDAL.Tangmaptt()
 
     End Sub
 

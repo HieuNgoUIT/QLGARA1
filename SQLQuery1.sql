@@ -23,45 +23,45 @@ GO
 
 CREATE TABLE PHIEUTIEPNHAN
 (	
-	maPhieuTiepNhan nvarchar(10) PRIMARY KEY,
+	maPhieuTiepNhan nvarchar(50) PRIMARY KEY,
 	ngayTiepNhan datetime2
 )
 
 CREATE TABLE HIEUXE
 (
-	maHieuXe nvarchar(10) PRIMARY KEY,
-	tenHieuXe nvarchar(10)
+	maHieuXe nvarchar(50) PRIMARY KEY,
+	tenHieuXe nvarchar(50)
 )
 
 CREATE TABLE KHACHHANG
 (
-	maKhachHang nvarchar(10) PRIMARY KEY,
-	tenChuXe nvarchar(10),
+	maKhachHang nvarchar(50) PRIMARY KEY,
+	tenChuXe nvarchar(50),
 	tienNo int,
-	email nvarchar(10),
-	diachi nvarchar(10),
-	dienthoai nvarchar(10)
+	email nvarchar(50),
+	diachi nvarchar(50),
+	dienthoai nvarchar(50)
 )
 
 
 CREATE TABLE XE
 (
-	bienSo nvarchar(10) PRIMARY KEY,
-	maHieuXe nvarchar(10)  FOREIGN KEY REFERENCES HIEUXE(maHieuXe),
-	maKhachHang nvarchar(10)  FOREIGN KEY REFERENCES KHACHHANG(maKhachHang)
+	bienSo nvarchar(50) PRIMARY KEY,
+	maHieuXe nvarchar(50)  FOREIGN KEY REFERENCES HIEUXE(maHieuXe),
+	maKhachHang nvarchar(50)  FOREIGN KEY REFERENCES KHACHHANG(maKhachHang)
 )
 
 
 CREATE TABLE CHITIETPHIEUTIEPNHAN
 (
-	maCTPTN	nvarchar(10)PRIMARY KEY not null,
-	maPhieuTiepNhan nvarchar(10) FOREIGN KEY REFERENCES PHIEUTIEPNHAN(maPhieuTiepNhan),
-	bienSo nvarchar(10)  FOREIGN KEY REFERENCES Xe(bienSo))
+	maCTPTN	nvarchar(50)PRIMARY KEY not null,
+	maPhieuTiepNhan nvarchar(50) FOREIGN KEY REFERENCES PHIEUTIEPNHAN(maPhieuTiepNhan),
+	bienSo nvarchar(50)  FOREIGN KEY REFERENCES Xe(bienSo))
 
 CREATE TABLE VATTU
 (
-	maVatTu nvarchar(10) PRIMARY KEY,
-	tenVatTu nvarchar(10),
+	maVatTu nvarchar(50) PRIMARY KEY,
+	tenVatTu nvarchar(50),
 	soLuong int,
 	donGia int
 )
@@ -69,12 +69,12 @@ CREATE TABLE VATTU
 
 CREATE TABLE CHITIETPSC
 (
-    maChiTietPSC nvarchar(10) PRIMARY KEY,
-	maPSC nvarchar(10) ,
+    maChiTietPSC nvarchar(50) PRIMARY KEY,
+	maPSC nvarchar(50) ,
 	ngaySuaChua datetime2,
-	bienSo nvarchar(10) FOREIGN KEY REFERENCES XE(bienSO),
-	noidung nvarchar(10),
-	maVatTu nvarchar(10) FOREIGN KEY REFERENCES VATTU(maVatTu),
+	bienSo nvarchar(50) FOREIGN KEY REFERENCES XE(bienSO),
+	noidung nvarchar(50),
+	maVatTu nvarchar(50) FOREIGN KEY REFERENCES VATTU(maVatTu),
 	tienCong int ,
 	thanhTien int
 )
@@ -82,8 +82,8 @@ CREATE TABLE CHITIETPSC
 
 CREATE TABLE PHIEUTHUTIEN
 (
-	maPhieuThu nvarchar(10) PRIMARY KEY,
-	bienSo nvarchar(10) FOREIGN KEY REFERENCES XE(bienSo),
+	maPhieuThu nvarchar(50) PRIMARY KEY,
+	bienSo nvarchar(50) FOREIGN KEY REFERENCES XE(bienSo),
 	ngayThuTien datetime2,
 	soTienThu int
 )
@@ -96,9 +96,9 @@ CREATE TABLE DOANHTHU
 )
 CREATE TABLE BAOCAOTON
 (
-	maBaoCaoTon nvarchar(10) PRIMARY KEY,
-	thangBaoCao nvarchar(10), 
-	maVatTu nvarchar(10) FOREIGN KEY REFERENCES VATTU(maVatTu),
+	maBaoCaoTon nvarchar(50) PRIMARY KEY,
+	thangBaoCao nvarchar(50), 
+	maVatTu nvarchar(50) FOREIGN KEY REFERENCES VATTU(maVatTu),
 	tonDau int,
 	phatSinh int,
 	tonCuoi int

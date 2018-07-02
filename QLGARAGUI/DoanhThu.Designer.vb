@@ -22,30 +22,12 @@ Partial Class DoanhThu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.tbThang = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.tbTongDoanhThu = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dgvPhieuThuTien = New System.Windows.Forms.DataGridView()
         CType(Me.dgvPhieuThuTien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 33)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "Tháng"
-        '
-        'tbThang
-        '
-        Me.tbThang.Location = New System.Drawing.Point(180, 33)
-        Me.tbThang.Name = "tbThang"
-        Me.tbThang.Size = New System.Drawing.Size(468, 20)
-        Me.tbThang.TabIndex = 1
         '
         'TextBox3
         '
@@ -89,8 +71,6 @@ Partial Class DoanhThu
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.tbTongDoanhThu)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.tbThang)
-        Me.Controls.Add(Me.TextBox1)
         Me.Name = "DoanhThu"
         Me.Text = "DoanhThu"
         CType(Me.dgvPhieuThuTien, System.ComponentModel.ISupportInitialize).EndInit()
@@ -98,9 +78,6 @@ Partial Class DoanhThu
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents tbThang As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents tbTongDoanhThu As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
