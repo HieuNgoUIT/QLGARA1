@@ -1,10 +1,12 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Configuration
+Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports QLGARABUS
 Imports QLGARADTO
 Public Class QuanLiXe
     Dim xeBus As XeBus
     Dim isEdit As Boolean
+    Dim str As String = ConfigurationManager.AppSettings("ConnectionString")
     Private Sub QuanLiXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         xeBus = New XeBus()
         dgvDanhSachXe.DataSource = xeBus.Taidulieu
@@ -16,7 +18,7 @@ Public Class QuanLiXe
         Dim command As SqlCommand
         Dim reader As SqlDataReader
         con = New SqlConnection()
-        con.ConnectionString = "Data Source=DESKTOP-M4843TO\SQLEXPRESS;Initial Catalog=QLGARA;Integrated Security=True"
+        con.ConnectionString = str
         con.Open()
         query = "select maHieuXe from HIEUXE"
         command = New SqlCommand(query, con)
@@ -57,7 +59,7 @@ Public Class QuanLiXe
         Dim command As SqlCommand
         Dim reader As SqlDataReader
         con = New SqlConnection()
-        con.ConnectionString = "Data Source=DESKTOP-M4843TO\SQLEXPRESS;Initial Catalog=QLGARA;Integrated Security=True"
+        con.ConnectionString = str
         con.Open()
         query = "select * from HIEUXE where maHieuXe='" + cbMaHieuXe.Text + "'"
         command = New SqlCommand(query, con)
@@ -66,11 +68,11 @@ Public Class QuanLiXe
         While (reader.Read())
 
             Dim ma As String
-        Dim ten As String
-        ma = reader.GetString(0)
-        ten = reader.GetString(1)
-        cbMaHieuXe.Text = ma
-        tbHieuXe.Text = ten
+            Dim ten As String
+            ma = reader.GetString(0)
+            ten = reader.GetString(1)
+            cbMaHieuXe.Text = ma
+            tbHieuXe.Text = ten
         End While
         con.Close()
         'CP,,,EF
